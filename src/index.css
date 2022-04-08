@@ -1,13 +1,738 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  /* --red: #CE0C00; */
+  --red: #c9302c;
+  --darkred: #8f0700;
+  --sectionheaderred: #cc4242;
+
+  --black: rgb(13, 13, 13);
+  --white: rgb(255, 252, 252);
 }
+
+html {
+  scroll-behavior: smooth;
+  background-color: rgb(247, 247, 247);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Playfair Display', serif;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  letter-spacing: -1px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  padding: 0.5rem 0;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5rem;
+  font-weight: 500;
+  color: var(--black);
+}
+
+a {
+  font-family: 'Open Sans', sans-serif;
+  text-decoration: none;
+}
+
+.boxShadow {
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.368);
+}
+
+.buttonPrimary {
+  background-color: var(--red);
+  color: var(--white);
+}
+
+.colorBlack {
+  color: var(--black);
+}
+
+.colorWhite {
+  color: var(--white);
+}
+
+.colorRed {
+  color: var(--red);
+  font-weight: 500;
+}
+
+header {
+  height: 8.7rem;
+  background-color: white;
+  overflow: hidden  ;
+}
+
+header div {
+  display: flex;
+  justify-content: space-between;
+  max-height: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 .5rem;
+}
+
+.headerLogo {
+  max-height: 9rem;
+  width: auto;
+}
+
+header a:nth-child(2) {
+  color: var(--white);
+  background-color: var(--red);
+  opacity: .9;
+  font-size: 2rem;
+  width: auto;
+  margin: auto 0;
+  padding: .6rem 2.5rem;
+  border-radius: 2rem;
+}
+
+svg {
+  vertical-align: middle;
+  margin-right: .2rem;
+}
+
+.main {
+  position: relative;
+  overflow: hidden;
+}
+
+.backgroundVideo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: .3;
+  pointer-events: none;
+  transform: scale(1.7);
+  object-fit: fill;
+}
+
+.mainWrapper {
+  background-color: var(--red) .8;
+  padding: 2.5rem 0;
+  overflow: hidden;
+}
+
+.mainContent {
+  background-color: rgba(2, 2, 2, 0.832);
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 1rem 2rem;
+  border-radius: 2rem;
+}
+
+.mainContent h1 {
+  color: var(--white);
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.mainContent:nth-child(1) {
+  position: relative;
+  z-index: 1;
+}
+
+.introVideoWrapper {
+  position: relative;
+  padding-top: 56.25%;
+}
+
+.introVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.mainFlex1 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.mainLogo {
+  flex: 1;
+  width: 50%;
+  min-width: 400px;
+  height: auto;
+  border-radius: .3rem;
+}
+
+.mainFlex1 form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  gap: .3rem;
+  width: 50%;
+  min-width: 300px;
+}
+
+.mainFlex1 form input, textarea{
+  font-family: 'Open Sans', sans-serif;
+  font-size: .9rem;
+  border-radius: .3rem;
+  width: 100%;
+  padding: .7rem;
+  border: none;
+  resize:vertical;
+}
+
+.mainFlex1 form input:nth-child(4){
+  padding-bottom: 3rem;
+}
+
+
+.mainFlex2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mainFlex2 div {
+  flex: 1;
+  padding: 0 1rem;
+}
+
+.mainFlex2 h1 {
+  color: var(--white);
+  text-align: center;
+  padding: 3rem 0 1rem;
+}
+
+.mainFlex2 p {
+  color: var(--white);
+  font-weight: 300;
+}
+
+.team {
+  margin: 3rem 0;
+}
+
+.team h1 {
+  color: var(--black);
+  font-size: 3rem;
+  font-weight: 550;
+text-align: center;
+font-family: 'Open Sans', sans-serif;
+}
+
+.teamContent {
+  width: 95%;
+  max-width: 900px;
+  margin: 3rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-evenly;
+  gap: 2.5rem;
+}
+
+.avatar {
+  text-align: center;
+  max-width: 300px;
+}
+
+.avatar img {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+  object-position: 50%;
+}
+
+.avatar h2 {
+  font-weight: 600;
+  padding: 0 1rem;
+  font-family: 'open sans';
+}
+
+.avatar h2:nth-child(3) {
+  font-weight: 200;
+}
+
+.avatar p {
+  padding: 1rem 0;
+}
+
+.avatar a {
+  color: var(--red);
+}
+
+.sectionHeader {
+  height: 25rem;
+  text-align: center;
+  background-position: center center;
+  background-size: cover;
+  opacity: .77;
+}
+
+.sectionHeader h1 {
+  position: relative;
+  color: rgb(231, 231, 231);
+  font-size: 3rem;
+  font-weight: 600;
+  padding: 1rem;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.trainingAndCoachingSectionHeader {
+  background-image: linear-gradient(#c9312cd9, #c9312cc4), url(./images/training-section-header-bg.jpg);
+}
+
+.topReasonsSectionHeader {
+  background-image: linear-gradient(#c9312cd9, #c9312cc4), url(./images/top-reasons-section-header-bg.jpg);
+}
+
+.ourTechnologySectionHeader {
+  background-image: linear-gradient(#c9312cd9, #c9312cc4), url(./images/our-tech-section-header-bg.jpg);
+}
+
+.careersSectionHeader {
+  background-image: linear-gradient(#c9312cd9, #c9312cc4), url(./images/join-us-section-header-bg.jpeg);
+}
+
+.flexWrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap-reverse;
+  width: 95%;
+  max-width: 1150px;
+  margin: 5rem auto;
+  gap: 3rem;
+}
+
+.flexWrapReverse {
+  flex-direction: row-reverse;
+}
+
+.flexWrap div {
+  flex: 1;
+  min-width: 300px;
+  max-width: 650px;
+}
+
+.flexWrap h1 {
+  color: var(--red);
+}
+
+.flexWrap p {
+  text-align: justify;
+}
+
+.flexWrap img {
+  width: 100%;
+  max-width: 650px;
+  min-width: 300px;
+  height: auto;
+  flex: 2;
+}
+
+.differenceFlexWrap {
+  display: flex;
+  align-items: stretch;
+  width: 95%;
+  max-width: 1250px;
+  margin: 8rem auto 4rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+
+.differenceText {
+  flex: 1;
+  min-width: 300px;
+}
+
+.differenceText h1 {
+  color: var(--red);
+}
+
+.differenceProgessBars {
+  flex: 2;
+  width: 50%;
+  min-width: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.differenceProgessBars p {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 550;
+}
+
+.differenceProgessBars div p:nth-child(1) {
+  padding: 1rem 0 0;
+}
+
+.progressBar {
+  position: relative;
+  width: 100%;
+  height: 2rem;
+  margin: 0 0 1rem;
+  border-radius: .2rem;
+  background-color: rgba(128, 128, 128, 0.216);
+}
+
+.progressBar div {
+  border-radius: .2rem;
+}
+
+.progressBar span {
+  position: absolute;
+  left: 0;
+  font-size: .7rem;
+  color: var(--white);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  padding: .5rem .6rem;
+}
+
+.growthKeller{
+  height: 100%;
+  background-color: var(--red);
+}
+
+.growthIndustry {
+  height: 100%;
+  background-color: rgb(58, 58, 58);
+}
+
+.reasonsWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  width: 95%;
+  margin: 3rem auto;
+  flex-wrap: wrap;
+  gap: 3rem 1rem;
+}
+
+.reason {
+  min-width: 200px;
+  max-width: 600px;
+  padding: 2rem;
+}
+
+.reason h2 {
+  font-size: 1.5rem;
+  padding: .5rem;
+  font-weight: 700;
+}
+
+.reason div {
+  height: 6rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: .5rem;
+}
+
+.reason div svg {
+  font-size: 5rem;
+  margin: 0;
+  color: var(--red);
+}
+
+.reason p {
+  padding: 1rem .5rem;
+  max-width: 350px;
+}
+
+.technologyWrapper {
+  margin: 0 auto;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 3rem;
+  background-color: rgb(22, 21, 21);
+}
+
+.technology {
+  position: relative;
+  min-width: 400px;
+  min-height: 250px;
+  width: 500px;
+  height: 300px;
+  /* background-color: rgba(55, 53, 53, 0.844); */
+  background-image: linear-gradient(to bottom right, rgba(42, 41, 41, 0.644), rgba(32, 30, 30, 0.89));
+  border-radius: .1rem;
+  overflow: hidden;
+  color: var(--white);
+  border-radius: 1rem;
+}
+
+.playVideoButton {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: .8rem .5rem;
+  opacity: 1;
+  border: none;
+  background-color: transparent;
+  color: var(--white);
+  transition: all .4s;
+}
+
+.playVideoButton svg {
+  margin-right: .5rem;
+}
+
+.technology:hover .playVideoButton {
+  border: .1rem solid rgba(255, 255, 255, 0.748);
+  background-color: rgba(0, 0, 0, 0.155);
+  border-radius: 1rem;
+  padding: .3rem 1.2rem;
+  cursor: pointer;
+}
+
+.playVideoButton:hover {
+  opacity: .9;
+}
+
+.technology:hover .playVideoButton::after {
+  content: "Watch video";
+}
+
+.technology h2 {
+  padding: 0 0 1rem;
+  color: var(--red);
+  font-weight: 600;
+  font-size: 2rem;
+  filter: brightness(1.2);
+}
+
+.technology p {
+  font-size: .9rem;
+  color: var(--white);
+}
+
+.technology img {
+  position: absolute;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: .6;
+  object-position: 2rem -1rem;
+  transform: scale(1.2);
+}
+
+.technologyFront {
+display: flex;
+flex-direction: column;
+padding: 1rem;
+}
+
+.technologyHover {
+  padding: 1rem;
+  display: none;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgba(55, 53, 53, 0.844);
+}
+
+.technology:hover .technologyHover{
+  display: flex;
+}
+
+.technology:hover .technologyFront{
+  display: none;
+}
+
+.technology:hover {
+  transform: translate(0, -.1rem);
+  transition: transform .1s;
+}
+
+.technologyVideoWrapper {
+  position: fixed;
+  display: none;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.844);
+}
+
+.technologyVideoPlayer {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 95%;
+}
+
+.closeVideo {
+  position: absolute;
+  top: -2rem;
+  right: -2rem;
+  cursor: pointer;
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.closeVideo::after {
+  content: "\00d7";
+}
+
+.careers {
+  width: 95%;
+  max-width: 1150px;
+  margin: 5rem auto;
+}
+
+.job {
+  margin: 2rem 0;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: rgba(0, 0, 0, 0.019);
+}
+
+.job p {
+  padding: 0 1rem;
+  max-width: 700px;
+  font-size: .9rem;
+}
+
+.jobTitle {
+  background-color: rgba(0, 0, 0, 0.108);
+  padding: 1rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.jobSubmitDetails {
+  height: 250px;
+}
+
+.jobArrow {
+  margin: 0;
+  display: block;
+  transition: transform .4s;
+}
+
+.jobArrow.open {
+  transform: rotate(180deg);
+  transition: transform .4s;
+}
+
+.jobToggle {
+  display: none;
+  transition: all .4s;
+}
+
+.jobToggle.open {
+  display: block;
+}
+
+.jobToggle h3 {
+  padding: 1rem;
+  font-weight: 600;
+}
+
+.contact {
+  background-color: #52525114;
+  border-top: .25rem solid var(--red);
+}
+
+.contactWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 3rem 0;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 1rem
+}
+
+.contactWrapper form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  gap: .5rem;
+  width: 50%;
+  min-width: 300px;
+}
+
+.contactWrapper form input, textarea{
+  font-family: 'Open Sans', sans-serif;
+  font-size: .9rem;
+  border-radius: .2rem;
+  border: 1px solid rgba(0, 0, 0, 0.385);
+  width: 100%;
+  padding: .7rem;
+  resize: vertical;
+}
+
+.contactWrapper form input:nth-child(4){
+  padding-bottom: 3rem;
+}
+
+.contactWrapper form input:nth-child(5){
+  border: none;
+  margin: 0 auto;
+}
+
+.contactDetails {
+  flex: 1;
+  text-align: center;
+  width: 50%;
+  min-width: 300px;
+}
+
+.contactDetails p {
+  font-size: 1.5rem;
+}
+
+.contactDetails h1 {
+  font-weight: 500;
+}
+
+.contactDetails a {
+  color: var(--black);
+}
+
+.contactDetails svg {
+  color: var(--red);
+  margin: .5rem;
+}
+
+footer {
+  background-color: var(--red);
+  color: var(--white);
+  font-size: 1rem;
+  text-align: center;
+  padding: 1rem;
+}
+
