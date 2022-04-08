@@ -17,7 +17,7 @@ function Main() {
             Phone: phone,
             Message: message,
         }
-        axios.post('url', data).then(response => {
+        axios.post(process.env.REACT_APP_SHEETS_URL, data).then(response => {
             console.log(response);
             setName('');
             setEmail('');

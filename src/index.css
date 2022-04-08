@@ -11,7 +11,7 @@
   --sectionheaderred: #cc4242;
 
   --black: rgb(13, 13, 13);
-  --white: rgb(255, 252, 252);
+  --white: #fffafa;
 }
 
 html {
@@ -197,6 +197,9 @@ svg {
   padding-bottom: 3rem;
 }
 
+.mainFlex1 form input:nth-child(5){
+  cursor: pointer;
+}
 
 .mainFlex2 {
   display: flex;
@@ -702,6 +705,7 @@ padding: 1rem;
 .contactWrapper form input:nth-child(5){
   border: none;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 .contactDetails {
