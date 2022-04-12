@@ -28,3 +28,9 @@ function App() {
 }
 
 export default App;
+
+
+
+// intro video
+// logo pictures
+// job checkbox values

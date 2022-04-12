@@ -30,16 +30,17 @@ function TrainingCoaching() {
     return (
         <>
             <SectionHeader headline={"Training and Coaching"} background="trainingAndCoachingSectionHeader" />
-
-            {flexWrap.map((x, i) => (
-                <div key={i} className={i % 2 === 0 ? "flexWrap" : "flexWrap flexWrapReverse"}>
-                    <div>
-                        <h1>{x.headline}</h1>
-                        <p>{x.text}</p>
+            <div className="trainingWrapper">
+                {flexWrap.map((x, i) => (
+                    <div key={i} className={i % 2 === 0 ? "flexWrap" : "flexWrap flexWrapReverse"}>
+                        <div>
+                            <h1>{x.headline}</h1>
+                            <p>{x.text}</p>
+                        </div>
+                        <img className="boxShadow" src={x.img} alt={x.headline} />
                     </div>
-                    <img className="boxShadow" src={x.img} alt={x.headline} />
-                </div>
-            ))}
+                ))}
+            </div>
         </>
     );
 }

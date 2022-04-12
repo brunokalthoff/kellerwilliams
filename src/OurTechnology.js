@@ -80,16 +80,19 @@ function OurTechnology() {
             <SectionHeader headline="Our Technology" background="ourTechnologySectionHeader" />
             <div className="technologyWrapper">
                 {videos.map((x, i) => (
-                    <div key={i} className="technology boxShadow">
-                        <button className="playVideoButton" value={x.vid} onClick={handleClick}><BsFillPlayCircleFill size={25} /></button>
-                        <img src={'http://img.youtube.com/vi/' + x.vid.slice(17) + '/0.jpg'} alt={x.title} />
-                        <div className="technologyFront">
-                            <h2>{x.title}</h2>
-                            <p>{x.description}</p>
+                    <div key={i} className="technology">
+                        <div className="technologyImgWrapper">
+                            <img src={'http://img.youtube.com/vi/' + x.vid.slice(17) + '/0.jpg'} alt={x.title} />
                         </div>
-                        <div className="technologyHover">
-                            <p>{x.text}</p>
-                            
+                        <div className="technologyText">
+                            <button className="watchVideoButton" value={x.vid} onClick={handleClick}><BsFillPlayCircleFill size={25} />WATCH VIDEO</button>
+                            <div className="technologyFront">
+                                <h2>{x.title}</h2>
+                                <p>{x.description}</p>
+                            </div>
+                            <div className="technologyHover">
+                                <p>{x.text}</p>
+                            </div>
                         </div>
                     </div>
                 ))}

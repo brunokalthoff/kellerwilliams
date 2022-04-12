@@ -32,18 +32,18 @@ function Contact(props) {
     return (
         <div id="contact" className="contact">
             <div className="contactWrapper">
-                <form id="contact" onSubmit={handleSubmit} type="submit">
+                {/* <form id="contact" onSubmit={handleSubmit} type="submit">
                     <input onChange={e => setName(e.target.value)} value={name} type="text" placeholder="Name" />
                     <input onChange={e => setEmail(e.target.value)} value={email} type="text" placeholder="Email" />
                     <input onChange={e => setPhone(e.target.value)} value={phone} type="text" placeholder="Phone Number" />
                     <textarea onChange={e => setMessage(e.target.value)} value={message} placeholder="Message" rows="3" ></textarea>
                     <input className="buttonPrimary" value="SEND" type="submit" />
-                </form>
+                </form> */}
 
                 <div className="contactDetails">
-                    <h1>Join our Brokerage</h1>
+                    <h1>Contact Us</h1>
                     <p><MdPhone size={30} /><a href="tel:+1-519-635-4799">(519)-635-4799</a></p>
-                    <p><MdMail size={30} />Email coming soon</p>
+                    <p><MdMail size={30} /> <a href="https://pages.kw.com/jerry-van-leeuwen/456631/c97sjueojc6fmk0ois5g.html" target="_blank" rel="noreferrer">Send an Email!</a> </p>
                     <p><MdLocationPin size={30} />Milton location coming soon</p>
 
                 </div>

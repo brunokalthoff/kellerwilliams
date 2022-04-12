@@ -1,5 +1,6 @@
 import SectionHeader from "./SectionHeader";
-import { BsChevronCompactDown } from 'react-icons/bs'
+import SubmitApplication from "./SubmitApplication";
+import { motion } from "framer-motion";
 
 function Careers() {
 
@@ -30,39 +31,41 @@ function Careers() {
         },
     ]
 
-    const handleClick = e => {
+    const handleClick = async e => {
         const i = e.target.id;
-        document.getElementsByClassName('jobToggle')[i].classList.toggle('open');
-        document.getElementsByClassName('jobArrow')[i].classList.toggle('open');
+        document.getElementById(`jobToggle${i}`).classList.toggle('open');
+        document.getElementById(`jobArrow${i}`).classList.toggle('open');
     }
 
     return (
-        <>  <div id="careers" />
+        <>
             <SectionHeader headline="Careers" background="careersSectionHeader" />
-            <div className="careers">
+            <motion.div layout className="careers">
                 {jobs.map((x, i) => (
-                    <div key={i} className="job">
-                        <div id={i} className="jobTitle" onClick={handleClick}>
+                    <motion.div
+                    transition={{ layout: { duration: 1, type: "spring" } }}
+                    layout
+                    key={i} className="job">
+                        <div className="jobTitle">
+                            <div id={i} onClick={handleClick}></div>
                             <h2>{x.title}</h2>
                             <div>
                                 <h3>Keller Williams Canada</h3>
                                 <h4>Milton Market Center</h4>
                             </div>
-                            <div className="jobSubmitDetails">
-                                <p>Submit your details, we will get back to you!</p>
-                                <button className="buttonPrimary">Submit Details</button>
-                            </div>
-                            <BsChevronCompactDown id={i} onClick={handleClick} className="jobArrow" size={50} />
                         </div>
-                        <div className="jobToggle">
+                        <motion.div layout id={`jobToggle${i}`} className="jobToggle">
+                        <div className="jobForm">
+                                <SubmitApplication jobTitle={x.title} />
+                            </div>
                             <div className="jobIntro"><h3>Who are we looking for?</h3><p>{x.intro}</p></div>
                             <div className="jobDuties"><h3>Main responsibilities and duties</h3><p>{x.duties}</p></div>
                             <div className="jobSkills"><h3>Skills & Qualifications</h3><p>{x.skills}</p></div>
-                        </div>
-                    </div>
+                        </motion.div>
+                    </motion.div>
                 ))}
 
-            </div>
+            </motion.div>
 
         </>
     );

@@ -6,7 +6,7 @@ function Header(props) {
         <header>
             <div>
                 <a href='#contact'><img className='headerLogo' src={mainLogo} alt='logo' /></a>
-                <a href="tel:+1-519-635-4799"><MdPhone />(519)-635-4799</a>
+                <a className='buttonPrimary' href="tel:+1-519-635-4799"><MdPhone />(519)-635-4799</a>
             </div>
         </header>
     );

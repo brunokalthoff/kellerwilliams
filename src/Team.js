@@ -1,8 +1,9 @@
 import React from "react";
-import jerry from './images/Jerry.jpg';
+import jerry from './images/Jerry.png';
 import jonah from './images/Jonah.PNG';
-import sillhouette1 from './images/sillhouette1.jpg';
-import sillhouette2 from './images/sillhouette2.jpg';
+import sillhouette1 from './images/sillhouette1.png';
+import sillhouette2 from './images/sillhouette2.png';
+import sillhouette3 from './images/sillhouette3.png';
 import { MdPhone } from 'react-icons/md';
 
 function Team() {
@@ -13,7 +14,7 @@ function Team() {
             role: "Market Centre Operating Principle",
             description: "at our Milton Market Center",
             name: "Jerry Van Leeuwen",
-            link: <a className="" href="tel:+1-519-635-4799"><MdPhone size={20} />(519)-635-4799</a>
+            link: <a className="buttonPrimary" href="tel:+1-519-635-4799"><MdPhone size={20} />(519)-635-4799</a>
         },
         {
             img: jonah,
@@ -23,18 +24,25 @@ function Team() {
             link: ""
         },
         {
-            img: sillhouette2,
+            img: sillhouette1,
             role: "Team Leader (m/f/d)",
      
             name: "YOU?",
-            link: <a href="#careers">Careers &#8250;</a>
+            link: <a className="colorRed" href="#careers">CAREERS &#8250;</a>
         },
         {
-            img: sillhouette1,
+            img: sillhouette2,
             role: "Productivity Coach (m/f/d)",
             description: "",
             name: "YOU?",
-            link: <a href="#careers">Careers &#8250;</a>
+            link: <a className="colorRed" href="#careers">CAREERS &#8250;</a>
+        },
+        {
+            img: sillhouette3,
+            role: "Market Center Administrator (m/f/d)",
+            description: "",
+            name: "YOU?",
+            link: <a className="colorRed" href="#careers">CAREERS &#8250;</a>
         },
     ]
 
