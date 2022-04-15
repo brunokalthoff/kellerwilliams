@@ -749,7 +749,7 @@ padding: 1rem;
 }
 
 .formError {
-  display: block;
+  display: none;
   position: relative;
   border: solid rgb(35, 25, 126);
   border-radius: .2rem;
