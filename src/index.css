@@ -5,20 +5,18 @@
 }
 
 :root {
-  /* --red: #CE0C00; */
-  --udkred: #e70036;
   --red: #a52a2a;
   --darkred: #8f0700;
   --black: rgb(13, 13, 13);
-  --white: #fffafa;
-
-  --bgColor: rgba(245, 240, 240, 0.838);;
+  --white: #fdf8f8;
+  --bgColor: rgb(247, 245, 245);
 }
 
 html {
   scroll-behavior: smooth;
   background-color: var(--bgColor);
   font-family: 'Open Sans', sans-serif;
+  color: var(--black);
 }
 
 h1,
@@ -39,11 +37,18 @@ p {
   line-height: 1.5rem;
   font-weight: 500;
   color: var(--black);
-  letter-spacing: 1px
+  letter-spacing: 1px;
+  font-size: .9rem;
 }
 
 a {
   text-decoration: none;
+  color: var(--red);
+}
+
+svg {
+  vertical-align: middle;
+  margin-right: .2rem;
 }
 
 .boxShadow {
@@ -51,10 +56,17 @@ a {
 }
 
 .buttonPrimary {
-  background-color: var(--red);
+  background-image: linear-gradient(to bottom, #b04343, #a50404);
   color: var(--white);
   opacity: .9;
-  border-radius: 2rem;
+  border-radius: .4rem;
+  padding: .6rem 1.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.buttonPrimary:hover {
+  filter: brightness(0.9);
 }
 
 .colorBlack {
@@ -78,36 +90,36 @@ header {
 
 header div {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  max-height: 100%;
+  height: 100%;
   max-width: 1200px;
+  width: 95%;
   margin: 0 auto;
 }
 
+header a:nth-child(1) {
+  height: 100%;
+}
+
 .headerLogo {
-  max-height: 5rem;
+  height: 100%;
   width: auto;
 }
 
-header a:nth-child(2) {
- 
-  width: auto;
-  margin: auto 0;
-  padding: .5rem 1rem;
-}
-
-svg {
-  vertical-align: middle;
-  margin-right: .2rem;
-}
-
-.main {
+.hero {
   position: relative;
   overflow: hidden;
   background-color: var(--white);
 }
 
-.backgroundVideo {
+.heroWrapper {
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* .backgroundVideo {
   position: absolute;
   left: 0;
   top: 0;
@@ -115,133 +127,76 @@ svg {
   pointer-events: none;
   transform: scale(1.7);
   object-fit: fill;
-}
+} */
 
-.mainHeadline {
-  overflow: hidden;
-  max-width: 1200px;
-  margin: 8rem auto;
-}
-
-.mainHeadline h1 {
-  color: var(--black);
-  text-align: left;
-  max-width: 50%;
-}
-
-
-.mainContent {
-  /* background-color: rgba(2, 2, 2, 0.832); */
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem;
-  border-radius: .1rem;
-}
-
-.mainContent:nth-child(1) {
+/* .heroContent:nth-child(1) {
   position: relative;
   z-index: 1;
+} */
+
+.heroHeadline {
+  overflow: hidden;
+  margin: 10rem auto 15rem;
+}
+
+.heroHeadline h1 {
+  font-size: 3.5rem;
+  color: var(--black);
+  max-width: 700px;
 }
 
 .introVideoWrapper {
-  width: fit-content;
-  height: fit-content;
-  margin-left: auto;
-  padding: 0 5rem;
-  background-color: var(--bgColor);
-}
-
-
-/* .mainFlex1 {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin: 1rem 0;
-} */
-
-/* .mainLogo {
-  flex: 1;
-  width: 50%;
-  min-width: 400px;
-  height: auto;
-  border-radius: .3rem;
-} */
-
-/* .mainFlex1 form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex: 1;
-  gap: .3rem;
-  width: 50%;
-  min-width: 300px;
-} */
-
-/* .mainFlex1 form input, textarea{
-  font-family: 'Open Sans', sans-serif;
-  font-size: .9rem;
-  border-radius: .3rem;
   width: 100%;
-  padding: .7rem;
-  border: none;
-  resize:vertical;
-} */
-
-/* .mainFlex1 form input:nth-child(4){
-  padding-bottom: 3rem;
+  max-width: 700px;
+  height: auto;
+  margin-left: auto;
+  background-color: white;
 }
 
-.mainFlex1 form input:nth-child(5){
-  cursor: pointer;
-} */
-
-.mainFlex2 {
+.heroFlex {
   display: flex;
   flex-wrap: wrap;
+  align-items: baseline;
   justify-content: space-between;
-  margin: 8rem 0;
+  margin: 15rem 0;
+  gap: 5rem;
 }
 
-.mainFlex2 div {
+.heroFlex div {
+  text-align: center;
   flex: 1;
-  padding: 0 1rem;
-  min-width: 300px;
+  min-width: 350px;
 }
 
-.mainFlex2 h1 {
+.heroFlex h1 {
   color: var(--red);
-  text-align: left;
-  padding: 3rem 0 1rem;
-}
-
-.mainFlex2 p {
-  width: 80%;
+  padding: 0 0 1rem;
 }
 
 .team {
-  margin: 8rem 0;
+  margin: 8rem 0 15rem;
 }
 
 .team h1 {
-text-align: center;
+  font-size: 3.5rem;
+  text-align: center;
 }
 
-.teamContent {
+.teamFlex {
   width: 95%;
-  max-width: 900px;
-  margin: 3rem auto 0;
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  align-items: stretch;
+  align-items: baseline;
   justify-content: space-evenly;
   gap: 2.5rem;
 }
 
 .avatar {
   text-align: center;
-  max-width: 300px;
-  min-width: 300px;
+  width: 250px;
+
 }
 
 .avatar img {
@@ -266,7 +221,7 @@ text-align: center;
 
 .avatar a {
   line-height: 5rem;
-  padding: .5rem 1rem;
+  font-size: .8rem;
 }
 
 .buttonAvatar {
@@ -275,7 +230,9 @@ text-align: center;
 }
 
 .sectionHeader {
-  height: 25rem;
+  width: 100vw;
+  height: 30rem;
+  margin: 0 auto;
   text-align: center;
   background-position: center center;
   background-size: cover;
@@ -283,12 +240,14 @@ text-align: center;
 }
 
 .sectionHeader h1 {
+  font-size: 3.5rem;
   position: relative;
   color: var(--white);
   font-weight: 600;
   padding: 1rem;
   top: 50%;
   transform: translate(0, -50%);
+  text-shadow: 0 0 1px white;
 }
 
 .trainingAndCoachingSectionHeader {
@@ -309,7 +268,7 @@ text-align: center;
 }
 
 .trainingWrapper {
-  padding: 3rem 0;
+  padding: 0 0 10rem;
 }
 
 .flexWrap {
@@ -318,7 +277,7 @@ text-align: center;
   justify-content: space-around;
   flex-wrap: wrap-reverse;
   width: 95%;
-  max-width: 1150px;
+  max-width: 1200px;
   margin: 5rem auto;
   gap: 3rem;
 }
@@ -337,10 +296,6 @@ text-align: center;
   color: var(--red);
 }
 
-.flexWrap p {
-  text-align: justify;
-}
-
 .flexWrap img {
   width: 100%;
   max-width: 650px;
@@ -352,12 +307,12 @@ text-align: center;
 .difference {
   background-color: var(--white);
   width: 100%;
-  padding: 8rem 0;
+  padding: 10rem 0 15rem;
 }
 
 .differenceFlexWrap {
   display: flex;
-  align-items: stretch;
+  align-items: baseline;
   width: 95%;
   max-width: 1250px;
   margin: 0 auto;
@@ -377,11 +332,9 @@ text-align: center;
 
 .differenceProgessBars {
   flex: 2;
-  width: 50%;
-  min-width: 450px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+ 
 }
 
 .differenceProgessBars p {
@@ -430,9 +383,9 @@ text-align: center;
   justify-content: center;
   align-items: baseline;
   width: 95%;
-  margin: 8rem auto;
+  margin: 10rem auto 15rem;
   flex-wrap: wrap;
-  gap: 5rem 1rem;
+  gap: 8rem 1rem;
 }
 
 .reason {
@@ -463,14 +416,14 @@ text-align: center;
   transition: transform .2s;
 }
 
-
 .reason p {
   max-width: 350px;
 }
 
 .technologyWrapper {
+  width: 95%;
   margin: 0 auto;
-  padding: 8rem 0;
+  padding: 10rem 0 15rem;
   display: flex;
   align-items: stretch;
   justify-content: center;
@@ -481,10 +434,11 @@ text-align: center;
 
 .technology {
   position: relative;
-  width: 400px; 
+  max-width: 400px;
+  max-height: 600px;
   height: auto;
   border-radius: .1rem;
-  background-color: rgba(255, 255, 255, 0.845);
+  background-color: rgb(255, 255, 255);
 }
 
 .technology h2 {
@@ -510,7 +464,7 @@ text-align: center;
 }
 
 .technologyText {
-  height: 200px;
+  min-height: 200px;
 }
 
 .watchVideoButton {
@@ -524,6 +478,7 @@ text-align: center;
   font-weight: 600;
   background-color: var(--black);
   padding: .5rem 1rem;
+  min-width: 150px;
   border-radius: .1rem;
   cursor: pointer;
 }
@@ -554,7 +509,7 @@ padding: 1rem;
 }
 
 .technologyHover p {
-  font-size: .9rem;
+  font-size: .8rem;
 }
 
 .technology:hover .technologyHover{
@@ -613,26 +568,33 @@ padding: 1rem;
 }
 
 .careers {
-  padding: 6rem 0;
+  padding: 5rem 0 15rem;
   background-color: var(--white);
 }
 
 .job {
   width: 95%;
   max-width: 1200px;
-  margin: 2rem auto;
+  margin: 0 auto;
   border-radius: .1rem;
+  border-top: 1px solid;
+}
+
+.jobToggle hr {
+  margin: 2rem auto;
+  opacity: .1;
 }
 
 .jobTitle {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.44);
+  min-height: 20rem;
   position: relative;
-  padding: 1rem;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   border-radius: .1rem;
-  background-color: white
+  background-color: var(--white);
+  text-align: center;
 }
 
 .jobTitle div:first-child {
@@ -643,18 +605,11 @@ padding: 1rem;
   cursor: pointer;
 }
 
-.jobTitle div {
-  text-align: right;
-}
-
-.jobTitle h2 {
-  color: var(--red);
-}
-
 .jobToggle {
   display: none;
   transition: all 1s;
-  background-color: white;
+  background-color: var(--white);
+  padding: 0 0 2rem;
 }
 
 .jobToggle.open {
@@ -662,31 +617,58 @@ padding: 1rem;
   transition: all 1s;
 }
 
-.jobToggle h3 {
-  padding: 1rem;
+.jobToggle button {
+  display: block;
+  border: none;
+  width: auto;
+  margin: 0 auto 3rem;
+}
+
+.jobForm {
+  padding: 3rem 0 10rem;
+}
+
+.jobFlex {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 95%;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+.jobFlex h3 {
+  flex: 1 2;
   font-weight: 600;
+  min-width: 250px;
 }
 
-.jobToggle p {
-  padding: 0 1rem;
-  max-width: 700px;
-  font-size: .9rem;
+.jobFlex p {
+  flex: 2 1;
+  min-width: 330px;
 }
 
-.applicationForm {
+.careersForm {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
-  padding: 2rem;
-  width: 500px;
-  margin-left: auto;
+  padding: 0 0 2rem;
+  max-width: 400px;
+  width: 95%;
+  margin: 0 auto;
+
 }
 
-.applicationForm div {
+.careersForm h2 {
+  padding: 2rem;
+}
+
+.careersForm div {
   position: relative;
   width: 100%;
-  margin: 1rem;
+  margin: .5rem;
 }
 
 .inputWrapper label {
@@ -696,62 +678,57 @@ padding: 1rem;
   font-size: .65rem;
   font-weight: 500;
   padding: 0 .3rem;
-  background-image: linear-gradient(to top, white 40%, white);
+  background-color: var(--white);
   z-index: 2;
   pointer-events: none;
 }
 
-.inputWrapper input, textarea {
+.inputWrapper input, textarea, select {
+  background-image: linear-gradient(to bottom, var(--white), white);
   width: 100%;
   border: 1px solid rgba(128, 128, 128, 0.526);
   border-radius: .3rem;
   accent-color: var(--red);
   padding: .5rem;
+  resize: vertical;
 }
 
 .inputWrapper input {
   height: 2.5rem;
 }
 
-.applicationForm input::placeholder, textarea::placeholder {
-  opacity: 1;
-}
-
-.applicationForm input[type="checkbox"] {
+.careersForm input[type="checkbox"] {
   height: 1rem;
   accent-color: var(--red);
 }
 
 .checkBox {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  padding-bottom: 1rem;
 }
 
 .checkBox label {
-  position: static;
-  display: inline-block;
   vertical-align: middle;
 }
 
 .checkBox input {
-  display: inline-block;
-  margin: 0 .5rem;
-  padding: 0rem;
+  margin-right: .5rem;
   vertical-align: middle;
+}
+
+input[type="submit"] {
 
 }
 
-
-
+.formSuccess {
+  border: solid green;
+}
 
 .contact {
   background-color: #52525114;
   border-top: .25rem solid var(--red);
-}
-
-.contactWrapper {
-
+  padding: 8rem 0;
 }
 
 .contactDetails {
@@ -759,31 +736,38 @@ padding: 1rem;
   max-width: 500px;
   min-width: 300px;
   margin: 0 auto;
-  padding: 3rem 0;
-}
-
-.contactDetails p {
-  font-size: 1.5rem;
-  font-weight: 300;
 }
 
 .contactDetails h1 {
-  padding: 2rem;
+  font-size: 3.5rem;
+  padding: 0 0 3rem;
+}
+
+.contactDetails svg {
+  font-size: 2.8rem;
+}
+
+.contactDetails h2 {
+  padding: .5rem;
 }
 
 .contactDetails a {
-  color: var(--black);
+  color: var(--red);
 }
 
 .contactDetails svg {
   color: var(--red);
-  margin: .5rem;
 }
 
 footer {
   background-color: var(--red);
   text-align: center;
-  padding: 1rem;
+  padding: 1rem .5rem;
 }
 
-
+footer p, footer a {
+  color: white;
+  font-weight: 100;
+  font-size: .7rem;
+  opacity: .7;
+}

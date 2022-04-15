@@ -8,13 +8,13 @@ import { MdPhone } from 'react-icons/md';
 
 function Team() {
 
-    const team = [
+    const teamLeaders = [
         {
             img: jerry,
             role: "Market Centre Operating Principle",
             description: "at our Milton Market Center",
             name: "Jerry Van Leeuwen",
-            link: <a className="buttonPrimary" href="tel:+1-519-635-4799"><MdPhone size={20} />(519)-635-4799</a>
+            link: <a className="" href="tel:+1-519-635-4799"><MdPhone size={20} />(519)-635-4799</a>
         },
         {
             img: jonah,
@@ -22,27 +22,30 @@ function Team() {
             description: "",
             name: "Jonah Hopkins",
             link: ""
-        },
+        }
+    ]
+
+    const teamOpen = [
         {
             img: sillhouette1,
             role: "Team Leader (m/f/d)",
-     
+
             name: "YOU?",
-            link: <a className="colorRed" href="#careers">CAREERS &#8250;</a>
+            link: <a href="#careers">CAREERS &#8250;</a>
         },
         {
             img: sillhouette2,
             role: "Productivity Coach (m/f/d)",
             description: "",
             name: "YOU?",
-            link: <a className="colorRed" href="#careers">CAREERS &#8250;</a>
+            link: <a href="#careers">CAREERS &#8250;</a>
         },
         {
             img: sillhouette3,
             role: "Market Center Administrator (m/f/d)",
             description: "",
             name: "YOU?",
-            link: <a className="colorRed" href="#careers">CAREERS &#8250;</a>
+            link: <a href="#careers">CAREERS &#8250;</a>
         },
     ]
 
@@ -50,8 +53,8 @@ function Team() {
     return (
         <div className="team">
             <h1>Leadership Team</h1>
-            <div className="teamContent">
-                {team.map((x, i) => (
+            <div className="teamFlex">
+                {teamLeaders.map((x, i) => (
                     <div key={i} className="avatar">
                         <img src={x.img} alt={x.role} />
                         <h2>{x.name}</h2>
@@ -61,6 +64,18 @@ function Team() {
                     </div>
                 ))}
             </div>
+            <div className="teamFlex">
+                {teamOpen.map((x, i) => (
+                    <div key={i} className="avatar">
+                        <img src={x.img} alt={x.role} />
+                        <h2>{x.name}</h2>
+                        <h2>{x.role}</h2>
+                        <p> {x.description}</p>
+                        {x.link}
+                    </div>
+                ))}
+            </div>
+
         </div>
     );
 }

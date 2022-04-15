@@ -1,5 +1,6 @@
+import React, {useState} from "react";
 import SectionHeader from "./SectionHeader";
-import SubmitApplication from "./SubmitApplication";
+import CareersForm from "./CareersForm";
 import { motion } from "framer-motion";
 
 function Careers() {
@@ -31,42 +32,51 @@ function Careers() {
         },
     ]
 
-    const handleClick = async e => {
+    const [inputs, setInputs] = useState(0);
+    const changeInputs = e => {
         const i = e.target.id;
-        document.getElementById(`jobToggle${i}`).classList.toggle('open');
-        document.getElementById(`jobArrow${i}`).classList.toggle('open');
+        setInputs(i);
+        document.querySelector(".careersForm").scrollIntoView();
     }
 
     return (
         <>
             <SectionHeader headline="Careers" background="careersSectionHeader" />
             <motion.div layout className="careers">
+            <div className="jobForm">
+                <CareersForm setInputs={setInputs} jobs={jobs} inputs={inputs} />
+            </div>
+            {/* <div style={{borderBottom: '1px solid #0000007a'}}></div> */}
                 {jobs.map((x, i) => (
                     <motion.div
-                    transition={{ layout: { duration: 1, type: "spring" } }}
-                    layout
-                    key={i} className="job">
+                        transition={{ layout: { duration: 1, type: "spring" } }}
+                        layout
+                        key={i} className="job">
                         <div className="jobTitle">
-                            <div id={i} onClick={handleClick}></div>
-                            <h2>{x.title}</h2>
+                            <div id={i} onClick={e=>document.getElementById(`jobToggle${e.target.id}`).classList.toggle('open')}></div>
+                            <h1>{x.title}</h1>
                             <div>
-                                <h3>Keller Williams Canada</h3>
-                                <h4>Milton Market Center</h4>
+                                <h3>Canada</h3>
+                                <h3>KW, Milton Market Center</h3>
                             </div>
                         </div>
+
                         <motion.div layout id={`jobToggle${i}`} className="jobToggle">
-                        <div className="jobForm">
-                                <SubmitApplication jobTitle={x.title} />
-                            </div>
-                            <div className="jobIntro"><h3>Who are we looking for?</h3><p>{x.intro}</p></div>
-                            <div className="jobDuties"><h3>Main responsibilities and duties</h3><p>{x.duties}</p></div>
-                            <div className="jobSkills"><h3>Skills & Qualifications</h3><p>{x.skills}</p></div>
+                            <button id={i} className="buttonPrimary" onClick={changeInputs}>Send your Details</button>
+                            {i !== 3 && (<>
+                            <div className="jobFlex"><h3>Who are we looking for?</h3><p>{x.intro}</p></div>
+                            <hr />
+                            <div className="jobFlex"><h3>Main responsibilities and duties</h3><p>{x.duties}</p></div>
+                            <hr />
+                            <div className="jobFlex"><h3>Skills & Qualifications</h3><p>{x.skills}</p></div>
+                            <button id={i} style={{ marginTop: '5rem'}} className="buttonPrimary" onClick={changeInputs}>Send your Details</button>
+                            </>
+                            )
+                            }
                         </motion.div>
                     </motion.div>
                 ))}
-
             </motion.div>
-
         </>
     );
 }

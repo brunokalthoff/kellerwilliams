@@ -6,8 +6,9 @@ import mainLogo from './images/main-logo.png';
 function Main() {
 
     return (
-        <div className="main">
-            {/* <ReactPlayer
+        <div className="hero">
+            <div className="heroWrapper">
+                {/* <ReactPlayer
                 className="backgroundVideo"
                 url='https://www.youtube.com/embed/xCAPK6UmJGI'
                 playing={true}
@@ -17,19 +18,16 @@ function Main() {
                 width='100%'
                 height='100%'
             /> */}
-            <div className="mainHeadline">
-            <h1>Keller Williams: Your <span className='colorRed'>Thriving Business</span> is our Mission!</h1>
-            </div>
-
-                <div className="mainContent">
-                    
+                <div className="heroHeadline">
+                    <h1>Keller Williams: Your <span className='colorRed'>Thriving Business</span> is our Mission!</h1>
+                </div>
                     <div className="introVideoWrapper">
                         <ReactPlayer
                             className="introVideo"
                             url='https://www.youtube.com/embed/xCAPK6UmJGI'
                             volume={50}
                             muted={true}
-                          
+                            width={'100%'}
                         /></div>
                     {/* <div className="mainFlex1">
                         <img className="mainLogo" src={mainLogo} alt="" />
@@ -41,7 +39,7 @@ function Main() {
                             <input className='buttonPrimary' value="SEND" type="submit" />
                         </form> */}
                     {/* </div> */}
-                    <div className="mainFlex2">
+                    <div className="heroFlex">
                         <div>
                             <h1>Mission</h1>
                             <p>Empower our Associates to build thriving businesses, to produce enriched lives and positive exponential impact for our clients.</p>
@@ -52,9 +50,10 @@ function Main() {
                         </div>
                     </div>
 
-                </div>
+                
             </div>
-      
+        </div>
+
     );
 }
 
