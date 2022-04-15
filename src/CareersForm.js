@@ -19,16 +19,17 @@ const messageField = useRef();
                 emailField.current.value = '';
                 phoneField.current.value = '';
                 messageField.current.value = '';
+
             }, (error) => {
                 console.log(error.text);
             });
     };
 
     const inputValues = [
-        { cb1: 'tits', cb2: 'boobs', cb3: 'ass' },
-        { cb1: 'swag', cb2: 'stagger', cb3: 'swing' },
-        { cb1: 'pimple', cb2: 'sweat', cb3: 'boner' },
-        { cb1: 'll', cb2: 'aa', cb3: 'eee' },
+        { cb1: 'a', cb2: 'b', cb3: 'c' },
+        { cb1: 'd', cb2: 'e', cb3: 'f' },
+        { cb1: 'g', cb2: 'h', cb3: 'i' },
+        { cb1: 'j', cb2: 'k', cb3: 'l' },
     ]
 
     const handleSelect = e => {
@@ -78,6 +79,7 @@ const messageField = useRef();
                 </div>
                 <input className='buttonPrimary' type="submit" value="Send" />
             </form>
+            <div className="formSuccess">Thank you, your message has been sent. We will reach back to you as soon as possible!</div>
         </>
     );
 };
