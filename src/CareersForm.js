@@ -1,5 +1,10 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { FiSend } from 'react-icons/fi'
+import { AiFillCloseCircle } from 'react-icons/ai'
+import { MdOutlineCancelScheduleSend } from 'react-icons/md'
+
+
 
 export const CareersForm = ({ jobs, inputs, setInputs }) => {
 
@@ -19,9 +24,11 @@ const messageField = useRef();
                 emailField.current.value = '';
                 phoneField.current.value = '';
                 messageField.current.value = '';
-
+                document.querySelector('.formSuccess').style.display = 'block';
             }, (error) => {
                 console.log(error.text);
+                document.querySelector('.formError').style.display = 'block';
+
             });
     };
 
@@ -78,8 +85,10 @@ const messageField = useRef();
                     </div>
                 </div>
                 <input className='buttonPrimary' type="submit" value="Send" />
+                <div className="formSuccess"><div><FiSend size={80} /></div><AiFillCloseCircle size={30} className='closeSuccess' onClick={()=>document.querySelector('.formSuccess').style.display = 'none'} /><h2>Your message has been sent!</h2><p>We will get back to you as soon as possible. Thank you!</p></div>
+                <div className="formError"><div><MdOutlineCancelScheduleSend size={80} /></div><AiFillCloseCircle size={30} className='closeSuccess' onClick={()=>document.querySelector('.formError').style.display = 'none'} /><h2>Something went wrong</h2><p>There was an error trying to send your message. Please try again later.</p></div>
             </form>
-            <div className="formSuccess">Thank you, your message has been sent. We will reach back to you as soon as possible!</div>
+            
         </>
     );
 };

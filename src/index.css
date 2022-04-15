@@ -717,12 +717,59 @@ padding: 1rem;
   vertical-align: middle;
 }
 
-input[type="submit"] {
-
+.careersButton {
+  background: transparent;
+  border: solid var(--red);
+  color: var(--red);
+  width: 10rem;
 }
 
 .formSuccess {
-  border: solid green;
+  display: none;
+  position: relative;
+  border: solid rgb(34, 149, 34);
+  border-radius: .2rem;
+  padding: .5rem;
+  margin: 1rem;
+  text-align: center;
+  color: green;
+  padding: 2rem;
+}
+
+.closeSuccess {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.formSuccess svg {
+  font-size: 3rem;
+  margin: 1rem;
+}
+
+.formError {
+  display: block;
+  position: relative;
+  border: solid rgb(35, 25, 126);
+  border-radius: .2rem;
+  padding: .5rem;
+  margin: 1rem;
+  text-align: center;
+  color: rgb(35, 25, 126);
+  padding: 2rem;
+}
+
+.formError {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.formError svg {
+  font-size: 3rem;
+  margin: 1rem;
 }
 
 .contact {
