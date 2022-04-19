@@ -1,10 +1,22 @@
 @media only screen and (max-width: 850px) {
 
+    .heroHeadline {
+      margin: 5rem 0 8rem;
+    }
+
     .heroHeadline h1 {
      max-width: 100%;
      text-align: center;
      padding: 1rem;
    }
+
+   .heroFlex {
+     margin: 8rem 0;
+   }
+
+   .team {
+    margin: 4rem 0 8rem;
+  }
 
    .sectionHeader {
     height: 20rem;
@@ -25,6 +37,16 @@
    }
    .differenceProgessBars h2 {
     text-align: center;
+}
+
+  .jobTitle {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.jobTitle h1, .jobTitle h3 {
+  text-align: center;
 }
 
     .jobForm {
@@ -49,7 +71,7 @@
        }
 
        .heroFlex {
-        margin: 8rem 0;
+        margin: 3rem 0;
        }
 
        .team {

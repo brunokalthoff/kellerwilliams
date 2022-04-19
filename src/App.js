@@ -1,6 +1,6 @@
 import './index.css';
 import Header from './Header';
-import Main from './Main';
+import Hero from './Hero';
 import Team from './Team';
 import TrainingCoaching from './TrainingCoaching';
 import Contact from './Contact';
@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Main />
+      <Hero />
       <Team />
       <TheDifference />
       <TopReasons />

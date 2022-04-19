@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import SectionHeader from "./SectionHeader";
 import CareersForm from "./CareersForm";
 import { motion } from "framer-motion";
@@ -39,21 +39,27 @@ function Careers() {
         document.querySelector(".careersForm").scrollIntoView();
     }
 
+    const handleOpen = e => {
+        const id = e.target.id;
+        document.getElementById(`jobToggle${id}`).classList.toggle('open');
+        document.getElementById(`jobTitle${id}`).classList.toggle('open');
+    }
+
     return (
         <>
             <SectionHeader headline="Careers" background="careersSectionHeader" />
             <motion.div layout className="careers">
-            <div className="jobForm">
-                <CareersForm setInputs={setInputs} jobs={jobs} inputs={inputs} />
-            </div>
-            {/* <div style={{borderBottom: '1px solid #0000007a'}}></div> */}
+                <div className="jobForm">
+                    <CareersForm setInputs={setInputs} jobs={jobs} inputs={inputs} />
+                </div>
+                {/* <div style={{borderBottom: '1px solid #0000007a'}}></div> */}
                 {jobs.map((x, i) => (
                     <motion.div
                         transition={{ layout: { duration: 1, type: "spring" } }}
                         layout
                         key={i} className="job">
-                        <div className="jobTitle">
-                            <div id={i} onClick={e=>document.getElementById(`jobToggle${e.target.id}`).classList.toggle('open')}></div>
+                        <div id={`jobTitle${i}`} className="jobTitle">
+                            <div id={i} onClick={handleOpen}></div>
                             <h1>{x.title}</h1>
                             <div>
                                 <h3>Canada</h3>
@@ -64,12 +70,12 @@ function Careers() {
                         <motion.div layout id={`jobToggle${i}`} className="jobToggle">
                             <button id={i} className="buttonPrimary" onClick={changeInputs}>Send your Details</button>
                             {i !== 3 && (<>
-                            <div className="jobFlex"><h3>Who are we looking for?</h3><p>{x.intro}</p></div>
-                            <hr />
-                            <div className="jobFlex"><h3>Main responsibilities and duties</h3><p>{x.duties}</p></div>
-                            <hr />
-                            <div className="jobFlex"><h3>Skills & Qualifications</h3><p>{x.skills}</p></div>
-                            <button id={i} style={{ marginTop: '5rem'}} className="buttonPrimary" onClick={changeInputs}>Send your Details</button>
+                                <div className="jobFlex"><h3>Who are we looking for?</h3><p>{x.intro}</p></div>
+                                <hr />
+                                <div className="jobFlex"><h3>Main responsibilities and duties</h3><p>{x.duties}</p></div>
+                                <hr />
+                                <div className="jobFlex"><h3>Skills & Qualifications</h3><p>{x.skills}</p></div>
+                                <button id={i} style={{ marginTop: '5rem' }} className="buttonPrimary" onClick={changeInputs}>Send your Details</button>
                             </>
                             )
                             }

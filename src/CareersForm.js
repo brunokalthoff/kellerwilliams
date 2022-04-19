@@ -17,7 +17,7 @@ const messageField = useRef();
         e.preventDefault();
 
 
-        emailjs.sendForm('service_qwa3d5s', 'template_keller', e.target, 'ustGWaX0OYckAM-qG')
+        emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, e.target, process.env.REACT_APP_USER_ID)
             .then((result) => {
                 console.log(result.text);
                 nameField.current.value = '';
@@ -47,7 +47,7 @@ const messageField = useRef();
     return (
         <>
             <form className='careersForm' onSubmit={sendEmail}>
-                <h2>Interested? Lets talk!</h2>
+            <h1>Interested? Lets talk!</h1>
                 <div className="inputWrapper">
                     <label className='label'>Job Title*</label>
                     <select onChange={handleSelect} value={inputs} name="job_title">
