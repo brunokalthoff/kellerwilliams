@@ -2,6 +2,7 @@ import SectionHeader from "./SectionHeader";
 import ReactPlayer from "react-player/lazy";
 import React, { useState } from "react";
 import { BsFillPlayCircleFill } from 'react-icons/bs';
+import { motion } from "framer-motion";
 
 function OurTechnology() {
 
@@ -80,7 +81,14 @@ function OurTechnology() {
             <SectionHeader headline="Our Technology" background="ourTechnologySectionHeader" />
             <div className="technologyWrapper">
                 {videos.map((x, i) => (
-                    <div key={i} className="technology">
+                    <motion.div
+
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{delay: 0.1}}
+                        viewport={{ once: true }}
+
+                        key={i} className="technology">
                         <div className="technologyImgWrapper">
                             <img src={'http://img.youtube.com/vi/' + x.vid.slice(17) + '/0.jpg'} alt={x.title} />
                         </div>
@@ -94,7 +102,7 @@ function OurTechnology() {
                                 <p>{x.text}</p>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
                 <div className="technologyVideoWrapper" onClick={handleCloseClick}>
                     <div className="closeVideo"></div>

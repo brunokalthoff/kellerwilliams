@@ -15,7 +15,7 @@ function TheDifference() {
         }
     }
 
-    const transition = { delay: 1, duration: 1 }
+    const transition = { duration: 1 }
 
     const graph = [
         {

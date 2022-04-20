@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import SectionHeader from "./SectionHeader";
 import CareersForm from "./CareersForm";
 import { motion } from "framer-motion";
+import { AiOutlinePlusSquare, AiOutlineMinusSquare } from 'react-icons/ai'
 
 function Careers() {
 
@@ -34,55 +35,58 @@ function Careers() {
 
     const [inputs, setInputs] = useState(0);
     const changeInputs = e => {
-        const i = e.target.id;
-        setInputs(i);
+        setInputs(e.target.id);
         document.querySelector(".careersForm").scrollIntoView();
     }
 
-    const handleOpen = e => {
-        const id = e.target.id;
-        document.getElementById(`jobToggle${id}`).classList.toggle('open');
-        document.getElementById(`jobTitle${id}`).classList.toggle('open');
+    const [open, setOpen] = useState(null);
+    const handleClose = e => {
+        setOpen(null);
+        document.querySelector(`#job${e.target.id}`).scrollIntoView();
     }
 
     return (
         <>
             <SectionHeader headline="Careers" background="careersSectionHeader" />
-            <motion.div layout className="careers">
+            <div className="careers">
                 <div className="jobForm">
                     <CareersForm setInputs={setInputs} jobs={jobs} inputs={inputs} />
                 </div>
-                {/* <div style={{borderBottom: '1px solid #0000007a'}}></div> */}
                 {jobs.map((x, i) => (
-                    <motion.div
-                        transition={{ layout: { duration: 1, type: "spring" } }}
-                        layout
-                        key={i} className="job">
-                        <div id={`jobTitle${i}`} className="jobTitle">
-                            <div id={i} onClick={handleOpen}></div>
-                            <h1>{x.title}</h1>
+                    <div key={i} id={`job${i}`} className="job">
+                        <div className= {i === open ? "jobTitle jobTitleOpen" : "jobTitle"}>
+                            <h1 onClick={()=>setOpen(prev=>{
+                                if (prev===i) return null;
+                                else return i;
+                            })}>{x.title}</h1>
                             <div>
-                                <h3>Canada</h3>
-                                <h3>KW, Milton Market Center</h3>
+                                <h3 style={i === open ? {textAlign: 'center'} : {}}>Canada</h3>
+                                <h3 style={i === open ? {textAlign: 'center'} : {}}>KW, Milton Market Center</h3>
                             </div>
+
+                                {i !== open && <p className="jobOpenButton" onClick={()=>setOpen(i)}><AiOutlinePlusSquare size={30} /></p>}
+                                {i === open && <p className="jobOpenButton" onClick={()=>setOpen(null)}><AiOutlineMinusSquare size={30} /></p>}
+
                         </div>
 
-                        <motion.div layout id={`jobToggle${i}`} className="jobToggle">
-                            <button id={i} className="buttonPrimary" onClick={changeInputs}>Send your Details</button>
-                            {i !== 3 && (<>
-                                <div className="jobFlex"><h3>Who are we looking for?</h3><p>{x.intro}</p></div>
-                                <hr />
-                                <div className="jobFlex"><h3>Main responsibilities and duties</h3><p>{x.duties}</p></div>
-                                <hr />
-                                <div className="jobFlex"><h3>Skills & Qualifications</h3><p>{x.skills}</p></div>
-                                <button id={i} style={{ marginTop: '5rem' }} className="buttonPrimary" onClick={changeInputs}>Send your Details</button>
-                            </>
+                        {i === open && <motion.div className="jobToggle">
+                            <button id={i} className="buttonPrimary" onClick={changeInputs}>Submit your Details</button>
+                            {i !== 3 && (
+                                <>
+                                    <div className="jobFlex"><h3>Who are we looking for?</h3><p>{x.intro}</p></div>
+                                    <hr />
+                                    <div className="jobFlex"><h3>Main responsibilities and duties</h3><p>{x.duties}</p></div>
+                                    <hr />
+                                    <div className="jobFlex"><h3>Skills & Qualifications</h3><p>{x.skills}</p></div>
+                                    <button id={i} style={{ marginTop: '5rem' }} className="buttonPrimary" onClick={changeInputs}>Send your Details</button>
+                                    <AiOutlineMinusSquare className="jobOpenButtonLow" id={i} onClick={handleClose} size={30} />
+                                </>
                             )
                             }
-                        </motion.div>
-                    </motion.div>
+                        </motion.div>}
+                    </div>
                 ))}
-            </motion.div>
+            </div>
         </>
     );
 }

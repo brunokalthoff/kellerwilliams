@@ -1,122 +1,140 @@
 @media only screen and (max-width: 850px) {
+  .heroHeadline {
+    margin: 5rem 0 8rem;
+  }
 
-    .heroHeadline {
-      margin: 5rem 0 8rem;
-    }
+  .heroHeadline h1 {
+    max-width: 100%;
+    text-align: center;
+    padding: 1rem;
+  }
 
-    .heroHeadline h1 {
-     max-width: 100%;
-     text-align: center;
-     padding: 1rem;
-   }
+  .heroFlex {
+    margin: 8rem 0;
+  }
 
-   .heroFlex {
-     margin: 8rem 0;
-   }
-
-   .team {
+  .team {
     margin: 4rem 0 8rem;
   }
 
-   .sectionHeader {
+  .sectionHeader {
     height: 20rem;
-   }
+  }
 
-   .sectionHeader h1 {
-       font-size: 2.5rem;
-   }
+  .sectionHeader h1 {
+    font-size: 2.5rem;
+  }
 
-   .differenceFlexWrap {
+  .differenceFlexWrap {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-   }
+  }
 
-   .differenceText {
-       text-align: center;
-   }
-   .differenceProgessBars h2 {
+  .differenceText {
     text-align: center;
-}
+  }
+  .differenceProgessBars h2 {
+    text-align: center;
+  }
+
+  .job {
+    border-top: none;
+    border-bottom: solid;
+  }
 
   .jobTitle {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
+  }
 
-.jobTitle h1, .jobTitle h3 {
-  text-align: center;
-}
+  .jobTitle h1,
+  .jobTitle h3 {
+    text-align: center;
+  }
 
-    .jobForm {
+  .jobForm {
     padding: 1rem 0 3rem;
   }
 
- }
+  .jobOpenButton {
+    position:static;
+    margin: 3rem 0;
+  }
 
+  .jobOpenButtonLow {
+    position: static;
+    cursor: pointer;
+    color: var(--red);
+    width: auto;
+    margin: 0 auto;
+    display: block;
+  }
 
- @media only screen and (max-width: 430px) {
-    .sectionHeader {
-        height: 15rem;
-       }
+}
 
-       header a:nth-child(2) {
-        font-size: .8rem;
-        padding: .5rem;
-       }
+@media only screen and (max-width: 430px) {
+  .sectionHeader {
+    height: 15rem;
+  }
 
-       .heroHeadline h1 {
-        font-size: 2.5rem;
-       }
+  header a:nth-child(2) {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
 
-       .heroFlex {
-        margin: 3rem 0;
-       }
+  .heroHeadline h1 {
+    font-size: 2.5rem;
+  }
 
-       .team {
-        margin: 3rem 0 8rem;
-      }
+  .heroFlex {
+    margin: 3rem 0;
+  }
 
-      .teamFlex {
-        gap: 0rem;
-      }
-      
-      .team h1 {
-        font-size: 2.5rem;
-        padding: 0 1rem;
-      }
+  .team {
+    margin: 3rem 0 8rem;
+  }
 
-      .difference {
-        background-color: var(--white);
-        width: 100%;
-        padding: 8rem 0;
-      }
+  .teamFlex {
+    gap: 0rem;
+  }
 
-      .technologyWrapper {
-        padding: 8rem 0;
-      }
+  .team h1 {
+    font-size: 2.5rem;
+    padding: 0 1rem;
+  }
 
-      .reasonsWrapper {
-        margin: 8rem auto;
-        gap: 5rem 1rem;
-      } 
-      
-      .trainingWrapper {
-        padding: 0 0 5rem;
-      }
+  .difference {
+    background-color: var(--white);
+    width: 100%;
+    padding: 8rem 0;
+  }
 
-       .contactDetails h1 {
-        font-size: 2.5rem;
-        padding: 0 0 2rem;
-      }
-      
-      .contactDetails h2 {
-        padding: .2rem;
-        font-size: 1rem;
-      }
+  .technologyWrapper {
+    padding: 8rem 0;
+  }
 
-      .contactDetails svg {
-          font-size: 2rem;
-      }
- }
+  .reasonsWrapper {
+    margin: 8rem auto;
+    gap: 5rem 1rem;
+  }
+
+  .trainingWrapper {
+    padding: 0 0 5rem;
+  }
+
+  .contactDetails h1 {
+    font-size: 2.5rem;
+    padding: 0 0 2rem;
+  }
+
+  .contactDetails h2 {
+    padding: 0.2rem;
+    font-size: 1rem;
+  }
+
+  .contactDetails svg {
+    font-size: 2rem;
+  }
+}

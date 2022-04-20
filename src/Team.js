@@ -5,6 +5,7 @@ import sillhouette1 from './images/sillhouette1.png';
 import sillhouette2 from './images/sillhouette2.png';
 import sillhouette3 from './images/sillhouette3.png';
 import { MdPhone } from 'react-icons/md';
+import { motion } from "framer-motion";
 
 function Team() {
 
@@ -49,30 +50,41 @@ function Team() {
         },
     ]
 
-
     return (
         <div className="team">
             <h1>Leadership Team</h1>
             <div className="teamFlex">
                 {teamLeaders.map((x, i) => (
-                    <div key={i} className="avatar">
+                    <motion.div
+                        initial={{ x: 300, y: 300, opacity: 0 }}
+                        whileInView={{ x: 0, y: 0,  opacity: 1 }}
+                        transition={{ delay: i * 0.2, type: "spring", stiffness: 70 }}
+                        viewport={{ once: true }}
+
+                        key={i} className="avatar">
                         <img src={x.img} alt={x.role} />
                         <h2>{x.name}</h2>
                         <h2>{x.role}</h2>
                         <p> {x.description}</p>
                         {x.link}
-                    </div>
+                    </motion.div>
                 ))}
             </div>
             <div className="teamFlex">
                 {teamOpen.map((x, i) => (
-                    <div key={i} className="avatar">
+                    <motion.div
+                        initial={{ x: -300, y: 300, opacity: 0 }}
+                        whileInView={{ x: 0, y: 0, opacity: 1 }}
+                        transition={{ delay: i * 0.2, type: "spring", stiffness: 100 }}
+                        viewport={{ once: true }}
+
+                        key={i} className="avatar">
                         <img src={x.img} alt={x.role} />
                         <h2>{x.name}</h2>
                         <h2>{x.role}</h2>
                         <p> {x.description}</p>
                         {x.link}
-                    </div>
+                    </motion.div>
                 ))}
             </div>
 

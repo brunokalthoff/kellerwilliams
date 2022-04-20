@@ -3,6 +3,7 @@ import SectionHeader from "./SectionHeader";
 import bigWhy from './images/big-why.jpg'
 import expertiseScaled from './images/expertise-scaled.jpg'
 import removeLimits from './images/remove-limits.jpg'
+import { motion } from "framer-motion";
 
 
 function TrainingCoaching() {
@@ -26,6 +27,12 @@ function TrainingCoaching() {
         }
     ]
 
+    const initial = [
+        { x: "100%", opacity: 0 },
+        { x: "-100%", opacity: 0 },
+        { x: "100%", opacity: 0 },
+    ]
+
 
     return (
         <>
@@ -37,7 +44,14 @@ function TrainingCoaching() {
                             <h1>{x.headline}</h1>
                             <p>{x.text}</p>
                         </div>
-                        <img className="boxShadow" src={x.img} alt={x.headline} />
+                        <motion.img className="boxShadow" src={x.img} alt={x.headline}
+                        
+                        initial={initial[i]}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        transition={{ delay: 0.1, type: "spring", stiffness: 50, duration: 0.2 }}
+                        viewport={{ once: true }}
+                        
+                        />
                     </div>
                 ))}
             </div>

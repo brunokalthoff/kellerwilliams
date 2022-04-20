@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 import { FaHandHoldingUsd, FaChartBar, FaBullhorn, FaUsers, FaMoneyBillWave, FaChalkboardTeacher, FaBrain, FaDesktop, FaBusinessTime } from 'react-icons/fa';
 import SectionHeader from "./SectionHeader";
@@ -7,7 +8,7 @@ function TopReasons() {
     const reasons = [
         {
             headline: "Building YOUR Business",
-            icon: <FaBusinessTime  />,
+            icon: <FaBusinessTime />,
             text: "It’s YOUR real estate business! You are in control of your career, not your broker. Traditionally, agents worked for the broker and relied heavily on them to succeed. Keller Williams changed that. We wouldn’t be in business without our associates, so the only thing we want to do is help you build your business.",
         },
         {
@@ -50,14 +51,20 @@ function TopReasons() {
         <>
             <SectionHeader headline={"Top Reasons to Join"} background="topReasonsSectionHeader" />
             <div className="reasonsWrapper">
-            {reasons.map((x, i) => (
-                <div key={i} className={i%2 === 0 ? "reason" : "reason"}>
-                    
-                    <div className={i%2 === 0 ? "" : ""}>{x.icon}</div>
-                    <h2 className={i%2 === 0 ? "" : ""}>{x.headline}</h2>
-                    <p className={i%2 === 0 ? "" : ""}>{x.text}</p>
-                </div>
-            ))}
+                {reasons.map((x, i) => (
+                    <motion.div
+
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ delay: 0.1, type: "spring", stiffness: 30 }}
+                        viewport={{ once: true }}
+
+                        key={i} className={i % 2 === 0 ? "reason" : "reason"}>
+                        <div className={i % 2 === 0 ? "" : ""}>{x.icon}</div>
+                        <h2 className={i % 2 === 0 ? "" : ""}>{x.headline}</h2>
+                        <p className={i % 2 === 0 ? "" : ""}>{x.text}</p>
+                    </motion.div>
+                ))}
             </div>
         </>
     );

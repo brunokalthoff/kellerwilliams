@@ -20,6 +20,10 @@ html {
   overflow-x: hidden;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 h1,
 h2,
 h3,
@@ -107,9 +111,10 @@ header {
   height: 5rem;
   background-color: white;
   overflow: hidden;
+  color: var(--red);
 }
 
-header div {
+header div:nth-child(1) {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -119,10 +124,6 @@ header div {
   margin: 0 auto;
 }
 
-header a:nth-child(1) {
-  height: 100%;
-}
-
 .headerLogo {
   height: 100%;
   width: auto;
@@ -130,6 +131,32 @@ header a:nth-child(1) {
 
 header svg {
   font-size: 1.5rem;
+}
+
+.splitButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
+  border: solid;
+  border-radius: .4rem;
+  
+} 
+
+.splitButton button {
+  border: none;
+  height: 100%;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.splitButton button:nth-child(2) {
+  border-left: solid var(--red);
+}
+
+.splitButton svg {
+  font-size: 2rem;
+  margin: 0 1rem;
 }
 
 .hero {
@@ -144,24 +171,7 @@ header svg {
   margin: 0 auto;
 }
 
-/* .backgroundVideo {
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: .3;
-  pointer-events: none;
-  transform: scale(1.7);
-  object-fit: fill;
-} */
-
-/* .heroContent:nth-child(1) {
-  position: relative;
-  z-index: 1;
-} */
-
 .heroHeadline {
-  opacity: 0;
-  overflow: hidden;
   margin: 12rem auto;
 }
 
@@ -177,6 +187,8 @@ header svg {
   height: auto;
   margin-left: auto;
   background-color: white;
+  border-radius: .2rem;
+  overflow: hidden;
 }
 
 .heroFlex {
@@ -292,7 +304,7 @@ header svg {
 }
 
 .trainingWrapper {
-  padding: 0 0 10rem;
+  padding: 2rem 0;
 }
 
 .flexWrap {
@@ -302,7 +314,7 @@ header svg {
   flex-wrap: wrap-reverse;
   width: 95%;
   max-width: 1200px;
-  margin: 5rem auto;
+  margin: 10rem auto;
   gap: 3rem;
 }
 
@@ -447,12 +459,12 @@ header svg {
 
 .technologyWrapper {
   margin: 0 auto;
-  padding: 10rem 0 15rem;
+  padding: 10rem 0 10rem;
   display: flex;
   align-items: stretch;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 3rem 1.5rem;
   background-color: var(--white);
 }
 
@@ -578,7 +590,7 @@ header svg {
   max-width: 95%;
 }
 
-.closeVideo {
+/* .closeVideo {
   position: absolute;
   top: -2rem;
   right: -2rem;
@@ -589,19 +601,19 @@ header svg {
 
 .closeVideo::after {
   content: "\00d7";
-}
+} */
 
 .careers {
-  padding: 5rem 0 15rem;
+  width: 100%;
+  padding: 0 0 10rem;
   background-color: var(--white);
 }
 
 .job {
-  width: 95%;
   max-width: 1200px;
-  margin: 0 auto;
-  border-radius: 0.1rem;
-  border-top: 1px solid;
+  width: 95%;
+  margin: 2rem auto;
+  border-top: solid;
 }
 
 .jobToggle hr {
@@ -616,11 +628,11 @@ header svg {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  border-radius: 0.1rem;
-  background-color: var(--white);
+  padding: .35rem;
 }
 
-.jobTitle.open {
+.jobTitleOpen {
+  text-align: center;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -629,30 +641,37 @@ header svg {
 .jobTitle h1 {
   font-size: 2rem;
   max-width: 500px;
+  cursor: pointer;
 }
 
 .jobTitle h3 {
   text-align: right;
 }
 
-.jobTitle div:first-child {
+.jobOpenButton {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
+  bottom: 0;
+  right: 0;
+  text-decoration: underline;
   cursor: pointer;
+  z-index: 0;
+  color: var(--red);
+}
+
+.jobOpenButtonLow {
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  right: 0;
+  text-decoration: underline;
+  cursor: pointer;
+  color: var(--red);
 }
 
 .jobToggle {
-  display: none;
-  transition: all 1s;
+  position: relative;
   background-color: var(--white);
   padding: 0 0 2rem;
-}
-
-.jobToggle.open {
-  display: block;
-  transition: all 1s;
 }
 
 .jobToggle button {
@@ -663,7 +682,7 @@ header svg {
 }
 
 .jobForm {
-  padding: 3rem 0 10rem;
+  padding: 8rem 0;
 }
 
 .jobFlex {
@@ -671,7 +690,6 @@ header svg {
   align-items: baseline;
   justify-content: space-between;
   flex-wrap: wrap;
-  max-width: 95%;
   margin: 0 auto;
   gap: 1rem;
 }
@@ -692,7 +710,6 @@ header svg {
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
-  padding: 0 0 2rem;
   max-width: 400px;
   width: 95%;
   margin: 0 auto;
@@ -700,7 +717,6 @@ header svg {
 
 .careersForm h1 {
   padding: 0 0 3rem;
-  color: var(--red);
   width: 100%;
 }
 
@@ -743,6 +759,11 @@ select {
   accent-color: var(--red);
 }
 
+.careersForm input[type="submit"] {
+  width: 50%;
+  background-color: var(--red);
+}
+
 .checkBox {
   display: flex;
   flex-direction: column;
@@ -756,13 +777,6 @@ select {
 .checkBox input {
   margin-right: 0.5rem;
   vertical-align: middle;
-}
-
-.careersButton {
-  background: transparent;
-  border: solid var(--red);
-  color: var(--red);
-  width: 10rem;
 }
 
 .formSuccess {
@@ -816,27 +830,24 @@ select {
 .contact {
   background-color: #52525114;
   border-top: 0.25rem solid var(--red);
-  padding: 8rem 0;
+  padding: 5rem 0;
 }
 
 .contactDetails {
   text-align: center;
-  max-width: 500px;
-  min-width: 300px;
-  margin: 0 auto;
 }
 
 .contactDetails h1 {
   font-size: 3.5rem;
-  padding: 0 0 3rem;
+  padding: 0 0 2rem;
 }
 
 .contactDetails svg {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
 }
 
 .contactDetails h2 {
-  padding: 0.5rem;
+  padding: .5rem;
 }
 
 .contactDetails a {
