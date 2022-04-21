@@ -17,14 +17,14 @@ function Hero() {
                         className='colorRed'
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ delay: 1.5, ease: 'easeInOut', duration: 2, }}
+                        transition={{ delay: 1.5, ease: 'easeOut', duration: 2, }}
                     >Thriving Business</motion.span> is our Mission!</motion.h1>
                 </motion.div>
                 <motion.div
-                    // initial={{ x: 300, opacity: 0 }}
-                    // whileInView={{ x: 0, opacity: 1 }}
-                    // transition={{ delay: 0.5, type: "spring", stiffness: 30 }}
-                    // viewport={{ once: true }}
+                    initial={{ x: 300, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ delay: 1.5, type: "spring", stiffness: 30 }}
+                    viewport={{ once: true }}
                     className="introVideoWrapper">
                     <ReactPlayer
                         className="introVideo"

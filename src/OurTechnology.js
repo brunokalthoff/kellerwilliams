@@ -93,7 +93,7 @@ function OurTechnology() {
                             <img src={'http://img.youtube.com/vi/' + x.vid.slice(17) + '/0.jpg'} alt={x.title} />
                         </div>
                         <div className="technologyText">
-                            <button className="watchVideoButton" value={x.vid} onClick={handleClick}><BsFillPlayCircleFill size={25} />Watch Video</button>
+                            <button className="buttonTertiary watchVideoButton" value={x.vid} onClick={handleClick}><BsFillPlayCircleFill size={25} />Watch Video</button>
                             <div className="technologyFront">
                                 <h2>{x.title}</h2>
                                 <p>{x.description}</p>
