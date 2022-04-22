@@ -5,8 +5,8 @@
 
   .heroHeadline h1 {
     max-width: 100%;
-    
-    padding: 1rem;
+    padding: 2rem;
+    font-size: 3rem;
   }
 
   .heroFlex {
@@ -14,7 +14,12 @@
   }
 
   .team {
-    margin: 4rem 0 8rem;
+    margin: 7rem 0 3rem;
+  }
+
+  .team h1 {
+    font-size: 2.5rem;
+    padding: 0 1rem;
   }
 
   .sectionHeader {
@@ -38,8 +43,15 @@
     text-align: center;
   }
 
+  .careers > h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 7.5rem 0 5rem;
+    font-weight: 600;
+  }
+
   .job {
-    margin: 2rem auto;
+    margin: 0 auto;
   }
 
   .jobTitle {
@@ -47,17 +59,24 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: solid;
   }
 
-  .jobTitle h1,
+  .jobTitle h2,
   .jobTitle h3 {
     text-align: center;
+    
   }
 
   .jobForm {
-    padding: 3rem 0;
+    padding: 0;
+    margin: 0;
     /* border-bottom: 1px solid rgba(0, 0, 0, 0.477); */
+  }
+
+  .careersFormWrapper {
+    background-color: white;
+    margin: 5rem 0 0;
+    padding: 4rem 0;
   }
 
   .jobOpenButton {
@@ -72,6 +91,24 @@
     width: auto;
     margin: 0 auto;
     display: block;
+  }
+
+  .contact {
+    padding: 5rem 0 4rem;
+  }
+
+  .contactDetails h1 {
+    font-size: 2.5rem;
+    padding: 0 0 1rem;
+  }
+
+  .contactDetails h2 {
+    padding: 0.2rem;
+    font-size: 1rem;
+  }
+
+  .contactDetails svg {
+    font-size: 2rem;
   }
 
 }
@@ -106,10 +143,6 @@
     gap: 0rem;
   }
 
-  .team h1 {
-    font-size: 2.5rem;
-    padding: 0 1rem;
-  }
 
   .difference {
     background-color: var(--white);
@@ -128,7 +161,7 @@
   }
 
   .trainingWrapper {
-    padding: 0 0 5rem;
+    padding: 2.5rem 0;
   }
 
   .flexWrap {
@@ -140,17 +173,11 @@
     padding: 0 0 3rem;
   }
 
-  .contactDetails h1 {
+  .careers > h1 {
     font-size: 2.5rem;
-    padding: 0 0 2rem;
+    text-align: center;
+    padding: 5rem 0 3rem;
+    font-weight: 600;
   }
 
-  .contactDetails h2 {
-    padding: 0.2rem;
-    font-size: 1rem;
-  }
-
-  .contactDetails svg {
-    font-size: 2rem;
-  }
 }

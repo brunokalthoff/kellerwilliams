@@ -33,7 +33,7 @@ export const CareersForm = ({ jobs, inputs, setInputs }) => {
     };
 
     const inputValues = [
-        { cb1: 'aaaa d', cb2: 'ölasf alskdf', cb3: 'cafas' },
+        { cb1: 'a', cb2: 'b', cb3: 'c' },
         { cb1: 'd', cb2: 'e', cb3: 'f' },
         { cb1: 'g', cb2: 'h', cb3: 'i' },
         { cb1: 'j', cb2: 'k', cb3: 'l' },

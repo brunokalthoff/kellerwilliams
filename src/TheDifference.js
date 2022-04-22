@@ -60,7 +60,7 @@ function TheDifference() {
 
                     {graph.map(bar => (
                         <div>
-                            <h2 style={bar.style[1]}>{bar.h2}</h2>
+                            {bar.h2 && <h2 style={bar.style[1]}>{bar.h2}</h2>}
                             <p className="progessBarsTitle">{bar.title}</p>
                             <div className="progressBar">
                                 <motion.span

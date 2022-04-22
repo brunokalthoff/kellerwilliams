@@ -9,7 +9,9 @@
   --darkred: #8f0700;
   --black: rgb(13, 13, 13);
   --white: #fdf8f8;
+  --white: #fafafa;
   --bgColor: rgb(247, 245, 245);
+  --bgColor: #fff;
 }
 
 html {
@@ -24,6 +26,13 @@ body {
   overflow-x: hidden;
 }
 
+ul {
+  list-style-position: outside;
+}
+li {
+  padding: .3rem .3rem;
+}
+
 h1,
 h2,
 h3,
@@ -36,6 +45,7 @@ h6 {
 h1 {
   font-size: 2.5rem;
   padding: 0.5rem 0;
+
 }
 
 p {
@@ -61,12 +71,12 @@ svg {
 }
 
 .buttonPrimary {
-  background-image: linear-gradient(to bottom, #b55d5d, #9f0101);
+  /* background-image: linear-gradient(to bottom, #b55d5d, #9f0101); */
+  background-color: var(--red);
   color: var(--white);
   opacity: 0.85;
-  border-radius: 0.2rem;
-  padding: 0.8rem 1.5rem;
   border: none;
+  padding: 1.5rem 3rem;
   cursor: pointer;
   box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.49);
   transition: all 0.1s ease-in-out;
@@ -98,10 +108,11 @@ svg {
 }
 
 .buttonTertiary {
-  background-image: linear-gradient(to bottom, #312c2c, #0f0e0e);
+  /* background-image: linear-gradient(to bottom, #312c2c, #0f0e0e); */
+  background-color: var(--black);
   color: var(--white);
-  border-radius: .2rem;
-  padding: 0.6rem 1.5rem;
+  opacity: .95;
+  padding: .75rem 1.5rem;
   border: none;
   cursor: pointer;
   box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.49);
@@ -128,9 +139,12 @@ svg {
 }
 
 header {
-  height: 5rem;
-  background-color: black;
+  height: calc(4.125rem + 46*(100vw - 68.75rem)/820);
+  min-height: 5rem;
+  max-height: 6rem;
+  background-color: white;
   overflow: hidden;
+  transition: all .4s;
 }
 
 header div:nth-child(1) {
@@ -138,7 +152,6 @@ header div:nth-child(1) {
   align-items: center;
   justify-content: space-between;
   height: 100%;
-  max-width: 1200px;
   width: 95%;
   margin: 0 auto;
 }
@@ -146,6 +159,7 @@ header div:nth-child(1) {
 .headerLogo {
   height: 100%;
   width: auto;
+  object-position: -1px;
 }
 
 header svg {
@@ -153,7 +167,7 @@ header svg {
 }
 
 .splitButton {
-  color: var(--white);  
+  color: var(--red);  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -162,11 +176,15 @@ header svg {
 }
 
 .splitButton a {
-  color: var(--white);
+  color: var(--red);
 }
 
 .splitButton span:nth-of-type(1) {
   margin: 0 1rem;
+}
+
+.splitButton span {
+  color: var(--black);
 }
 
 .splitButton svg:hover {
@@ -187,6 +205,7 @@ header svg {
   position: relative;
   overflow: hidden;
   background-color: var(--white);
+  box-shadow: inset 0px 5px 5px rgba(0, 0, 0, 0.09);
 }
 
 .heroWrapper {
@@ -196,13 +215,19 @@ header svg {
 }
 
 .heroHeadline {
-  margin: 12rem auto;
+  margin: 10rem auto;
 }
 
 .heroHeadline h1 {
   font-size: 3.5rem;
+  font-weight: 550;
   color: var(--black);
   max-width: 700px;
+  padding: 2rem;
+}
+
+.heroHeadline span {
+  font-weight: 550;
 }
 
 .introVideoWrapper {
@@ -220,7 +245,7 @@ header svg {
   flex-wrap: wrap;
   align-items: baseline;
   justify-content: space-between;
-  margin: 12rem 0;
+  margin: 10rem 0;
   gap: 5rem;
 }
 
@@ -232,11 +257,11 @@ header svg {
 
 .heroFlex h1 {
   color: var(--red);
-  padding: 0 0 1rem;
+  padding: 0 0 1.5rem;
 }
 
 .team {
-  margin: 5rem 0 12rem;
+  margin: 7.5rem 0 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -248,7 +273,9 @@ header svg {
 
 .team h1 {
   font-size: 3.5rem;
+  font-weight: 600;
   text-align: center;
+  margin: 0 0 1rem;
 }
 
 .teamFlex {
@@ -275,8 +302,13 @@ header svg {
   border-radius: .2rem;
 }
 
+.avatar h2:nth-child(2) {
+  margin: 0 0 .5rem;
+}
+
 .avatar h2:nth-child(3) {
   font-weight: 200;
+  
 }
 
 .avatar p {
@@ -346,8 +378,8 @@ header svg {
   flex-wrap: wrap-reverse;
   width: 95%;
   max-width: 1200px;
-  margin: 10rem auto;
-  gap: 3rem;
+  margin: 7.5rem auto;
+  gap: 3.5rem;
 }
 
 .flexWrapReverse {
@@ -361,7 +393,8 @@ header svg {
 }
 
 .flexWrap h1 {
-  font-size: 2rem;
+  padding: 0;
+  margin: 0 0 2rem;
   color: var(--red);
 }
 
@@ -376,7 +409,7 @@ header svg {
 .difference {
   background-color: var(--white);
   width: 100%;
-  padding: 8rem 0 12rem;
+  padding: 7.5rem 0 7.5rem;
 }
 
 .differenceFlexWrap {
@@ -397,12 +430,17 @@ header svg {
 
 .differenceText h1 {
   color: var(--red);
+  margin: 0 0 2rem;
 }
 
 .ProgessBars {
   flex: 2;
   display: flex;
   flex-direction: column;
+}
+
+.ProgessBars h2 {
+  margin: 0 0 1rem;
 }
 
 .differenceProgessBars p {
@@ -418,7 +456,7 @@ header svg {
   position: relative;
   width: 100%;
   height: 2rem;
-  margin: 0 0 1rem;
+  margin: 0 0 .5rem;
   border-radius: 0.2rem;
   background-color: rgba(128, 128, 128, 0.216);
   overflow: hidden;
@@ -452,9 +490,9 @@ header svg {
   justify-content: center;
   align-items: baseline;
   width: 95%;
-  margin: 10rem auto 15rem;
+  margin: 7.5rem auto 7.5rem;
   flex-wrap: wrap;
-  gap: 8rem 1rem;
+  gap: 7.5rem 1rem;
 }
 
 .reason {
@@ -465,18 +503,17 @@ header svg {
 
 .reason h2 {
   color: var(--black);
-  padding: 1rem 0;
+  padding: 2rem 0 1.5rem;
 }
 
 .reason div {
-  height: 8rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
 .reason div svg {
-  font-size: 5rem;
+  font-size: 4.5rem;
   margin: 0;
   color: var(--red);
 }
@@ -491,7 +528,7 @@ header svg {
 
 .technologyWrapper {
   margin: 0 auto;
-  padding: 10rem 0 10rem;
+  padding: 7.5rem 0 7.5rem;
   display: flex;
   align-items: stretch;
   justify-content: center;
@@ -511,11 +548,11 @@ header svg {
 }
 
 .technology h2 {
-  padding: 1.5rem 0 0;
+  margin: 2.5rem 0 1.5rem;
 }
 
 .technology p {
-  padding: 1rem 0;
+  padding: 0 0 1.5rem;
 }
 
 .technologyImgWrapper {
@@ -555,7 +592,7 @@ header svg {
 }
 
 .technologyHover {
-  padding: 2rem 1rem 1rem;
+  padding: 2.5rem 1rem 1rem;
   display: none;
   height: 100%;
   flex-direction: column;
@@ -629,15 +666,15 @@ header svg {
 .careers > h1 {
   font-size: 3.5rem;
   text-align: center;
-  padding: 10rem 0 0rem;
+  padding: 7.5rem 0 0rem;
 }
 
 .job {
   max-width: 1200px;
   width: 95%;
-  margin: 5rem auto;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.477);
-  border-top: 1px solid rgba(0, 0, 0, 0.477);
+  margin: 3rem auto;
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0.477); */
+  /* border-top: 1px solid rgba(0, 0, 0, 0.477); */
 }
 
 .jobToggle hr {
@@ -651,7 +688,7 @@ header svg {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 3rem 0;
+  padding: 4rem 0;
 }
 
 .jobTitleOpen {
@@ -674,7 +711,7 @@ header svg {
 
 .jobOpenButton {
   position: absolute;
-  bottom: .5rem;
+  bottom: .3rem;
   right: 0;
   text-decoration: underline;
   cursor: pointer;
@@ -727,13 +764,13 @@ header svg {
 .jobFlex p {
   flex: 2 1;
   min-width: 330px;
+  padding: 0 1rem;
 }
 
 .careersFormWrapper {
   background-color: white;
-  padding: 5rem 0 12rem;
-  margin: 15rem 0 0;
-  border-radius: .2rem;
+  padding: 5rem 0;
+  margin: 7.5rem 0 5rem;
 }
 
 .careersForm {
@@ -799,7 +836,8 @@ select {
 }
 
 .careersForm input[type="submit"] {
-  width: 100%;
+  width: 10rem;
+  margin: 0 auto;
 }
 
 .checkBox {
@@ -872,7 +910,7 @@ select {
 .contact {
   background-color: #52525114;
   border-top: 0.25rem solid var(--red);
-  padding: 5rem 0;
+  padding: 7.5rem 0 6rem;
 }
 
 .contactDetails {
@@ -881,7 +919,7 @@ select {
 
 .contactDetails h1 {
   font-size: 3.5rem;
-  padding: 0 0 1rem;
+  padding: 0 0 1.5rem;
 }
 
 .contactDetails svg {

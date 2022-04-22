@@ -91,7 +91,7 @@ function Team() {
                 ))}
 
             </div>
-            <a href="#careers" className="buttonPrimary">Apply here &#8250;</a>
+            <a href="#careers" className="buttonPrimary">Apply here</a>
         </div>
     );
 }
