@@ -77,7 +77,7 @@ export const CareersForm = ({ jobs, inputs, setInputs }) => {
 
                 <div className="inputWrapper">
                     <label>Message</label>
-                    <textarea name="message" rows="6" ref={messageField} placeholder="Enter Your Message" />
+                    <textarea name="message" rows="4" ref={messageField} placeholder="Enter Your Message" />
                 </div>
                 <p>Please select your skills:</p>
                 <div className="checkBox">
