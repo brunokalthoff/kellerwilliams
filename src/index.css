@@ -303,13 +303,15 @@ header svg {
   border-radius: .2rem;
 }
 
-.avatar h2:nth-child(2) {
+.avatar h2 {
+  font-weight: 600;
   margin: 0 0 1.1rem;
 }
 
-.avatar h2:nth-child(3) {
+.avatar h3 {
+  font-size: 1.5rem;
   font-weight: 200;
-  
+
 }
 
 .avatar p {
