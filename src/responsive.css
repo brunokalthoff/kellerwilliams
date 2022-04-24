@@ -1,12 +1,16 @@
 @media only screen and (max-width: 850px) {
   .heroHeadline {
-    margin: 5rem 0 8rem;
+    
   }
 
   .heroHeadline h1 {
     max-width: 100%;
-    padding: 2rem;
     font-size: 3rem;
+    text-align: center;
+  }
+
+  .introVideoWrapper {
+    margin-right: auto;
   }
 
   .heroFlex {
@@ -14,7 +18,7 @@
   }
 
   .team {
-    margin: 7rem 0 3rem;
+    padding: 7rem 0;
   }
 
   .team h1 {
@@ -136,7 +140,7 @@
   }
 
   .team {
-    margin: 3rem 0 5rem;
+    padding: 3rem 0 5rem;
   }
 
   .teamFlex {

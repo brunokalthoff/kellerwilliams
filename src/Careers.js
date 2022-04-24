@@ -91,7 +91,7 @@ function Careers() {
                             }
 
                         </motion.div>}
-
+                            <hr />
                     </div>
                 ))}
                 <div className="jobForm">

@@ -66,8 +66,8 @@ function Team() {
 
                         key={i} className="avatar">
                         <img src={x.img} alt={x.role} />
-                        <h2>{x.name}</h2>
-                        <h2>{x.role}</h2>
+                        <h2 className="avatarName">{x.name}</h2>
+                        <h3 className="avatarRole">{x.role}</h3>
                         <p> {x.description}</p>
                         {x.link}
                     </div>
@@ -83,8 +83,8 @@ function Team() {
 
                         key={i} className="avatar">
                         <img src={x.img} alt={x.role} />
-                        <h2>{x.name}</h2>
-                        <h2>{x.role}</h2>
+                        <h2 className="avatarName">{x.name}</h2>
+                        <h3 className="avatarRole">{x.role}</h3>
                         <p> {x.description}</p>
                         {x.link}
                     </motion.div>

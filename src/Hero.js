@@ -10,20 +10,20 @@ function Hero() {
                 <motion.div
                     className="heroHeadline">
                     <motion.h1
-                        initial={{ x: -300, opacity: 0 }}
-                        animate={{ x: 0, opacity: 1 }}
-                        transition={{ delay: 1, type: "spring", stiffness: 30 }}
+                        initial={{ y: 30, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ delay: 0.5, type: "spring", stiffness: 30 }}
                     >Keller Williams: Your <motion.span
                         className='colorRed'
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ delay: 1.5, ease: 'easeOut', duration: 2, }}
+                        transition={{ delay: 0.8, ease: 'easeOut', duration: 2, }}
                     >Thriving Business</motion.span> is our Mission!</motion.h1>
                 </motion.div>
                 <motion.div
                     initial={{ x: 300, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
-                    transition={{ delay: 1.5, type: "spring", stiffness: 30 }}
+                    transition={{ delay: 1, type: "spring", stiffness: 50 }}
                     viewport={{ once: true }}
                     className="introVideoWrapper">
                     <ReactPlayer

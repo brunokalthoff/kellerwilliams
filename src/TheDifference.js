@@ -27,7 +27,7 @@ function TheDifference() {
         },
         {
             h2: "",
-            title: "KELLER WILLIAMS",
+            title: "INDUSTRY",
             span: "1.1%",
             style: [{ width: '6%' }, { margin: "" }],
             class: "growthIndustry",
@@ -41,7 +41,7 @@ function TheDifference() {
         },
         {
             h2: "",
-            title: "KELLER WILLIAMS",
+            title: "INDUSTRY",
             span: "7.2%",
             style: [{ width: '36%' }, { margin: "" }],
             class: "growthIndustry",

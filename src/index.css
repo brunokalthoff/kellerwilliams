@@ -153,13 +153,14 @@ header div:nth-child(1) {
   justify-content: space-between;
   height: 100%;
   width: 95%;
+  max-width: 2000px;
   margin: 0 auto;
 }
 
 .headerLogo {
   height: 100%;
   width: auto;
-  object-position: -1px;
+  object-position: -0.9rem;
 }
 
 header svg {
@@ -202,6 +203,7 @@ header svg {
 }
 
 .hero {
+  margin: 0 auto;
   position: relative;
   overflow: hidden;
   background-color: var(--white);
@@ -210,7 +212,7 @@ header svg {
 
 .heroWrapper {
   width: 95%;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
@@ -219,16 +221,12 @@ header svg {
 }
 
 .heroHeadline h1 {
-  font-size: 3.5rem;
-  font-weight: 550;
+  font-family: 'Patua One', cursive;
+  font-size: 4rem;
   color: var(--black);
   max-width: 700px;
-  padding: 2rem;
 }
 
-.heroHeadline span {
-  font-weight: 550;
-}
 
 .introVideoWrapper {
   width: 100%;
@@ -261,10 +259,12 @@ header svg {
 }
 
 .team {
-  margin: 7.5rem 0 5rem;
+  padding: 7.5rem 0 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 .team > a {
@@ -272,6 +272,7 @@ header svg {
 }
 
 .team h1 {
+  font-family: 'Patua One', cursive;
   font-size: 3.5rem;
   font-weight: 600;
   text-align: center;
@@ -303,7 +304,7 @@ header svg {
 }
 
 .avatar h2:nth-child(2) {
-  margin: 0 0 .5rem;
+  margin: 0 0 1.1rem;
 }
 
 .avatar h2:nth-child(3) {
@@ -336,10 +337,11 @@ header svg {
 }
 
 .sectionHeader h1 {
-  font-size: 3.5rem;
+  font-family: 'Patua One', cursive;
+  font-size: 5rem;
   position: relative;
   color: var(--white);
-  font-weight: 600;
+  font-weight: 200;
   padding: 1rem;
   top: 50%;
   transform: translate(0, -50%);
@@ -369,6 +371,8 @@ header svg {
 
 .trainingWrapper {
   padding: 2rem 0;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 .flexWrap {
@@ -377,7 +381,6 @@ header svg {
   justify-content: space-around;
   flex-wrap: wrap-reverse;
   width: 95%;
-  max-width: 1200px;
   margin: 7.5rem auto;
   gap: 3.5rem;
 }
@@ -404,11 +407,12 @@ header svg {
   min-width: 300px;
   height: auto;
   flex: 2;
+  border-radius: .2rem;
 }
 
 .difference {
   background-color: var(--white);
-  width: 100%;
+  margin: 0 auto;
   padding: 7.5rem 0 7.5rem;
 }
 
@@ -416,7 +420,7 @@ header svg {
   display: flex;
   align-items: baseline;
   width: 95%;
-  max-width: 1250px;
+  max-width: 1300px;
   margin: 0 auto;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -430,7 +434,7 @@ header svg {
 
 .differenceText h1 {
   color: var(--red);
-  margin: 0 0 2rem;
+  margin: 0 0 1.5rem;
 }
 
 .ProgessBars {
@@ -486,6 +490,7 @@ header svg {
 }
 
 .reasonsWrapper {
+  max-width: 1300px;
   display: flex;
   justify-content: center;
   align-items: baseline;
@@ -527,6 +532,7 @@ header svg {
 }
 
 .technologyWrapper {
+  max-width: 1300px;
   margin: 0 auto;
   padding: 7.5rem 0 7.5rem;
   display: flex;
@@ -534,7 +540,7 @@ header svg {
   justify-content: center;
   flex-wrap: wrap;
   gap: 3rem 1.5rem;
-  background-color: var(--white);
+ 
 }
 
 .technology {
@@ -543,8 +549,9 @@ header svg {
   max-width: 95%;
   height: 600px;
   height: auto;
-  border-radius: 0.1rem;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--white);
+  border-radius: .2rem;
+  overflow: hidden; 
 }
 
 .technology h2 {
@@ -569,7 +576,7 @@ header svg {
 }
 
 .technologyText {
-  min-height: 200px;
+  height: 230px;
 }
 
 .watchVideoButton {
@@ -589,18 +596,20 @@ header svg {
   display: flex;
   flex-direction: column;
   padding: 1rem;
+  height: 100%;
 }
 
 .technologyHover {
-  padding: 2.5rem 1rem 1rem;
   display: none;
   height: 100%;
+  align-items: center;
   flex-direction: column;
-  justify-content: CENTER;
+  justify-content: center;
 }
 
 .technologyHover p {
   font-size: 0.8rem;
+  margin: 1rem;
 }
 
 .technology:hover .technologyHover {
@@ -659,20 +668,20 @@ header svg {
 } */
 
 .careers {
-  width: 100%;
+  margin: 0 auto;
   background-color: var(--white);
 }
 
 .careers > h1 {
-  font-size: 3.5rem;
+  font-weight: 700;
   text-align: center;
   padding: 7.5rem 0 0rem;
 }
 
 .job {
-  max-width: 1200px;
   width: 95%;
-  margin: 3rem auto;
+  max-width: 1300px;
+  margin: 0rem auto;
   /* border-bottom: 1px solid rgba(0, 0, 0, 0.477); */
   /* border-top: 1px solid rgba(0, 0, 0, 0.477); */
 }
@@ -711,7 +720,7 @@ header svg {
 
 .jobOpenButton {
   position: absolute;
-  bottom: .3rem;
+  bottom: .5rem;
   right: 0;
   text-decoration: underline;
   cursor: pointer;
@@ -727,8 +736,8 @@ header svg {
 .jobOpenButtonLow {
   position: absolute;
   z-index: 10;
-  bottom: 0;
-  right: 1rem;
+  bottom: 2rem;
+  right: 0rem;
   text-decoration: underline;
   cursor: pointer;
   color: var(--red);
@@ -790,7 +799,7 @@ header svg {
   text-align: center;
   padding: 0;
 }
-.careersForm p {
+.careersForm h4 {
   width: 100%;
   text-align: center;
   padding: 0 0 1rem;
@@ -918,6 +927,7 @@ select {
 }
 
 .contactDetails h1 {
+  font-family: 'Patua One', cursive;
   font-size: 3.5rem;
   padding: 0 0 1.5rem;
 }
@@ -928,7 +938,7 @@ select {
   margin-right: .8rem;
 }
 
-.contactDetails h2 {
+.contactDetails h3 {
   padding: .3rem;
 }
 
