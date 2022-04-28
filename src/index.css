@@ -589,18 +589,18 @@ header svg {
   background-color: transparent;
   color: var(--white);
   position: absolute;
-  z-index: 1;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* min-width: 180px; */
   border: none;
   cursor: pointer;
+  z-index: 1;
 }
 
 .watchVideoButton svg {
   padding: 0;
   margin: 0;
+  z-index: -1;
 }
 
 .technologyFront {
@@ -649,7 +649,6 @@ header svg {
 
 .technologyVideoWrapper {
   position: fixed;
-  display: none;
   top: 0;
   left: 0;
   bottom: 0;
@@ -657,7 +656,7 @@ header svg {
   width: 100%;
   height: 100vh;
   z-index: 3;
-  background-color: rgba(0, 0, 0, 0.849);
+  background-color: rgba(0, 0, 0, 0.882);
 }
 
 .technologyVideoPlayer {
@@ -671,7 +670,6 @@ header svg {
   width: 600px;
   height: auto;
   z-index: 10;
-  border: solid;
 }
 
 .closeVideo {
@@ -691,12 +689,9 @@ header svg {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -100%);
- 
+  z-index: -1;
 }
 
-.closeVideo::after {
-  content: "\00d7";
-}
 
 .careers {
   margin: 0 auto;
@@ -706,13 +701,17 @@ header svg {
 .careers > h1 {
   font-weight: 700;
   text-align: center;
-  padding: 7.5rem 0 0rem;
+  padding: 7.5rem 0 4.5rem;
 }
 
 .job {
   width: 95%;
   max-width: 1300px;
-  margin: 0rem auto;
+  margin: 3rem auto;
+  padding: 1rem 3rem;
+  border-radius: 0.2rem;
+  border: 1px solid rgba(0, 0, 0, 0.075);
+  background-color: white;
   /* border-bottom: 1px solid rgba(0, 0, 0, 0.477); */
   /* border-top: 1px solid rgba(0, 0, 0, 0.477); */
 }
@@ -729,6 +728,7 @@ header svg {
   align-items: center;
   justify-content: space-between;
   padding: 4rem 0;
+  cursor: pointer;
 }
 
 .jobTitleOpen {
@@ -736,11 +736,11 @@ header svg {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.075);
 }
 
 .jobTitle h2 {
   max-width: 500px;
-  cursor: pointer;
   text-align: left;
   color: var(--red);
 }
@@ -751,8 +751,8 @@ header svg {
 
 .jobOpenButton {
   position: absolute;
-  bottom: 0.5rem;
-  right: 0;
+  bottom: 0rem;
+  right: -2rem;
   text-decoration: underline;
   cursor: pointer;
   z-index: 0;
@@ -761,13 +761,13 @@ header svg {
 
 .jobOpenButton svg {
   margin: 0;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .jobOpenButtonLow {
   position: absolute;
   z-index: 10;
-  bottom: 2rem;
+  bottom: 0rem;
   right: 0rem;
   text-decoration: underline;
   cursor: pointer;
@@ -776,14 +776,13 @@ header svg {
 
 .jobToggle {
   position: relative;
-  background-color: var(--white);
   padding: 0 0 2rem;
 }
 
 .jobToggle button {
   display: block;
   width: auto;
-  margin: 0 auto 3rem;
+  margin: 3rem auto;
 }
 
 .jobFlex {
@@ -807,6 +806,10 @@ header svg {
   min-width: 330px;
   padding: 0 1rem;
   max-width: 95vw;
+}
+
+.jobForm {
+  margin: 15rem 0 7.5rem;
 }
 
 .careersFormWrapper {
@@ -835,7 +838,7 @@ header svg {
 .careersForm h4 {
   width: 100%;
   text-align: center;
-  padding: 0 0 1rem;
+  padding: 1rem;
 }
 
 .careersForm div {
@@ -911,7 +914,7 @@ select {
   display: flex;
   align-items: baseline;
   padding: 1rem;
-  margin: 0.5rem;
+  margin: 0 0 0.5rem;
   border-radius: 0.2rem;
   background-color: rgba(223, 216, 216, 0.112);
 }
@@ -977,7 +980,7 @@ select {
 .contact {
   background-color: #52525114;
   border-top: 0.25rem solid var(--red);
-  padding: 7.5rem 0 6rem;
+  padding: 7.5rem 0 7.5rem;
 }
 
 .contactDetails {

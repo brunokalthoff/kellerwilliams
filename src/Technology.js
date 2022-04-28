@@ -2,6 +2,7 @@ import SectionHeader from "./SectionHeader";
 import ReactPlayer from "react-player/lazy";
 import React, { useState } from "react";
 import { CgPlayButtonO } from 'react-icons/cg';
+import { AiOutlineClose } from 'react-icons/ai'
 import { motion } from "framer-motion";
 
 function Technology() {
@@ -65,32 +66,31 @@ function Technology() {
 
     const [selectedVideo, setSelectedVideo] = useState('');
 
-    const handleClick = e => {
-        const url = e.target.value;
-        setSelectedVideo(url);
-        document.querySelector('.technologyVideoWrapper').style.display = 'block';
-    }
+    // const handleClick = async e => {
+    //     await setSelectedVideo(e.target.id);
+    //     document.querySelector('.technologyVideoWrapper').style.display = 'block';
+    // }
 
-    const handleCloseClick = () => {
-        document.querySelector('.technologyVideoWrapper').style.display = 'none';
-        setSelectedVideo('');
-    }
+    // const handleCloseClick = async () => {
+    //     await setSelectedVideo('');
+    //     document.querySelector('.technologyVideoWrapper').style.display = 'none';
+    // }
 
     return (
         <>
             <SectionHeader headline="Our Technology" background="technologySectionHeader" />
-            <div className="technologyWrapper">
+            <motion.div layout className="technologyWrapper">
                 {videos.map((x, i) => (
                     <motion.div
 
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
-                        transition={{delay: 0.1}}
+                        transition={{ delay: 0.1 }}
                         viewport={{ once: true }}
 
                         key={i} className="technology">
-                        <div className="technologyImgWrapper">
-                        <button className=" watchVideoButton" value={x.vid} onClick={handleClick}><CgPlayButtonO size={80} /></button>
+                        <div onClick={() => setSelectedVideo(x.vid)} className="technologyImgWrapper">
+                            <button className="watchVideoButton"><CgPlayButtonO size={80} /></button>
                             <img src={'http://img.youtube.com/vi/' + x.vid.slice(17) + '/0.jpg'} alt={x.title} />
                         </div>
                         <div className="technologyText">
@@ -104,24 +104,32 @@ function Technology() {
                         </div>
                     </motion.div>
                 ))}
-                <div className="technologyVideoWrapper" onClick={handleCloseClick}>
-                    
-                    <div className="technologyVideoPlayer">
-                    <div className="closeVideo" />
-                    <h3 className="technologyVideoLoading">Loading video...</h3>
-                   <ReactPlayer
-                   style={{zindex: 50}}
+                {selectedVideo && <motion.div layout
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: .5 }}
+                    className="technologyVideoWrapper"
+                    onClick={() => setSelectedVideo('')}>
+
+                    <motion.div layout
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: .5 }}
+                        className="technologyVideoPlayer">
+                        <div className="closeVideo"><AiOutlineClose size={20} /></div>    
+                        <h3 className="technologyVideoLoading">Loading video...</h3>
+                        <ReactPlayer
                             url={selectedVideo}
                             volume={50}
                             muted={true}
                             controls={true}
                             playing={true}
                             width={'100%'}
+                           
                         />
-                      
-                    </div>
-                </div>
-            </div>
+                    </motion.div>
+                </motion.div>}
+            </motion.div>
         </>
     );
 }

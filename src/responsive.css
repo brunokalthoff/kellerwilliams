@@ -23,6 +23,10 @@
     padding: 0 1rem;
   }
 
+  .flexWrap div {
+    text-align: center;
+  }
+
   .sectionHeader {
     height: 20rem;
   }
@@ -40,6 +44,7 @@
   .differenceText {
     text-align: center;
   }
+
   .differenceProgessBars h2 {
     text-align: center;
   }
@@ -61,10 +66,6 @@
     font-weight: 600;
   }
 
-  .job {
-    margin: 0 auto;
-  }
-
   .jobTitle {
     padding: 2rem;
     flex-direction: column;
@@ -72,10 +73,18 @@
     justify-content: center;
   }
 
+  .jobTitle h2 {
+    margin: 2rem 0 1rem;
+  }
+
   .jobTitle h2,
   .jobTitle h3 {
     text-align: center;
     
+  }
+
+  .jobToggle {
+    text-align: center;
   }
 
   .jobForm {
