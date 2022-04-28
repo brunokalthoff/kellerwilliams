@@ -108,15 +108,16 @@ function Technology() {
                     
                     <div className="technologyVideoPlayer">
                     <div className="closeVideo" />
-                        <ReactPlayer
+                   <ReactPlayer
                             url={selectedVideo}
                             volume={50}
                             muted={true}
                             controls={true}
                             playing={true}
                             width={'100%'}
-                            
+                            fallback={'Loading...'}
                         />
+                      
                     </div>
                 </div>
             </div>
