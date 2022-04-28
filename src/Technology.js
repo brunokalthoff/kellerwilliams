@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { BsFillPlayCircleFill } from 'react-icons/bs';
 import { motion } from "framer-motion";
 
-function OurTechnology() {
+function Technology() {
 
     const videos = [
         {
@@ -78,7 +78,7 @@ function OurTechnology() {
 
     return (
         <>
-            <SectionHeader headline="Our Technology" background="ourTechnologySectionHeader" />
+            <SectionHeader headline="Our Technology" background="technologySectionHeader" />
             <div className="technologyWrapper">
                 {videos.map((x, i) => (
                     <motion.div
@@ -93,7 +93,7 @@ function OurTechnology() {
                             <img src={'http://img.youtube.com/vi/' + x.vid.slice(17) + '/0.jpg'} alt={x.title} />
                         </div>
                         <div className="technologyText">
-                            <button className="buttonTertiary watchVideoButton" value={x.vid} onClick={handleClick}><BsFillPlayCircleFill size={25} />Watch Video</button>
+                            <button className="buttonSecondary watchVideoButton" value={x.vid} onClick={handleClick}><BsFillPlayCircleFill size={25} />Watch Video</button>
                             <div className="technologyFront">
                                 <h2>{x.title}</h2>
                                 <p>{x.description}</p>
@@ -105,14 +105,17 @@ function OurTechnology() {
                     </motion.div>
                 ))}
                 <div className="technologyVideoWrapper" onClick={handleCloseClick}>
-                    <div className="closeVideo"></div>
+                    
                     <div className="technologyVideoPlayer">
+                    <div className="closeVideo" />
                         <ReactPlayer
                             url={selectedVideo}
                             volume={50}
                             muted={true}
                             controls={true}
                             playing={true}
+                            width={'100%'}
+                            
                         />
                     </div>
                 </div>
@@ -121,4 +124,4 @@ function OurTechnology() {
     );
 }
 
-export default OurTechnology;
+export default Technology;

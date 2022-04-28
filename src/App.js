@@ -7,7 +7,7 @@ import Contact from './Contact';
 import Footer from './Footer';
 import TopReasons from './TopReasons';
 import TheDifference from './TheDifference';
-import OurTechnology from './OurTechnology';
+import Technology from './Technology';
 import Careers from './Careers';
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
       <Team />
       <TheDifference />
       <TopReasons />
-      <OurTechnology />
+      <Technology />
       <TrainingCoaching />
       <Careers/>
       <Contact />

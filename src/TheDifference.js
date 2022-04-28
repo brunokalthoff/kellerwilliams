@@ -58,8 +58,8 @@ function TheDifference() {
                 <div className="ProgessBars">
 
 
-                    {graph.map(bar => (
-                        <div>
+                    {graph.map((bar, i) => (
+                        <div key={i}>
                             {bar.h2 && <h2 style={bar.style[1]}>{bar.h2}</h2>}
                             <p className="progessBarsTitle">{bar.title}</p>
                             <div className="progressBar">

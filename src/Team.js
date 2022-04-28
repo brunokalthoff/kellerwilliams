@@ -59,11 +59,6 @@ function Team() {
             <div className="teamFlex">
                 {teamLeaders.map((x, i) => (
                     <div
-                        // initial={{ x: 300, y: 300, opacity: 0 }}
-                        // whileInView={{ x: 0, y: 0,  opacity: 1 }}
-                        // transition={{ delay: i * 0.2, type: "spring", stiffness: 70 }}
-                        // viewport={{ once: true }}
-
                         key={i} className="avatar">
                         <img src={x.img} alt={x.role} />
                         <h2 className="avatarName">{x.name}</h2>

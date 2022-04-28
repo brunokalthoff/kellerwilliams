@@ -58,7 +58,7 @@ export const CareersForm = ({ jobs, inputs, setInputs }) => {
         <div className="careersFormWrapper">
             <form className='careersForm' onSubmit={sendEmail}>
                 <h1>Interested? Lets talk!</h1>
-                <h4>Send Us Your Contact Information And We Will Get Back To You.</h4>
+                <h4>Send us your contact information and we will get back to you</h4>
 
                 <div className="inputWrapper">
                     <label className='label'>Name *</label>
@@ -88,7 +88,7 @@ export const CareersForm = ({ jobs, inputs, setInputs }) => {
                     <label>Message</label>
                     <textarea name="message" rows="4" ref={messageField} placeholder="Enter Your Message" />
                 </div>
-                <h4>Please Select Your Skills:</h4>
+                <h4>Select your skills:</h4>
                 <div className="checkBox">
                     <div>
                         <label><input type="checkbox" name="cb1" value={inputValues[inputs].cb1} />{inputValues[inputs].cb1}</label>

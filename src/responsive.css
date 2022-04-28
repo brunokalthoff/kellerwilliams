@@ -1,7 +1,4 @@
 @media only screen and (max-width: 850px) {
-  .heroHeadline {
-    
-  }
 
   .heroHeadline h1 {
     max-width: 100%;
@@ -45,6 +42,16 @@
   }
   .differenceProgessBars h2 {
     text-align: center;
+  }
+
+  .technologyVideoPlayer {
+    position: relative;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90vw;
+    height: auto;
   }
 
   .careers > h1 {
@@ -154,6 +161,9 @@
     padding: 3rem 0 5rem;
   }
 
+  .technologyText {
+    height: auto;
+  }
   .technologyWrapper {
     padding: 5rem 0;
     gap: 5rem;
@@ -171,6 +181,20 @@
   .flexWrap {
     margin: 3rem auto 5rem;
     gap: 2rem;
+  }
+
+  .jobFlex {
+    flex-direction: column;
+  }
+
+  .jobFlex h3 {
+    flex: 1 2;
+    font-weight: 600;
+    min-width: auto;
+    max-width: 90vw;
+  }
+  .jobFlex p {
+    min-width: auto;
   }
 
   .jobForm {

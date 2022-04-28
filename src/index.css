@@ -80,7 +80,7 @@ svg {
   cursor: pointer;
   box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.49);
   transition: all 0.1s ease-in-out;
-
+  text-decoration: none;
 }
 
 .buttonPrimary:hover {
@@ -91,24 +91,6 @@ svg {
 
 .buttonSecondary {
   font-weight: 600;
-  color: var(--red);
-  background-color: var(--white);
-  border-radius: 0.2rem;
-  padding: 0.6rem 1.5rem;
-  cursor: pointer;
-  box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.163);
-  transition: all 0.1s ease-in-out;
-  border: solid var(--red);
-  text-transform: uppercase;
-}
-
-.buttonSecondary:hover {
-  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.312);
-  transform: scale(1.01);
-}
-
-.buttonTertiary {
-  /* background-image: linear-gradient(to bottom, #312c2c, #0f0e0e); */
   background-color: var(--black);
   color: var(--white);
   opacity: .95;
@@ -116,11 +98,10 @@ svg {
   border: none;
   cursor: pointer;
   box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.49);
-  transition: all 0.3s;
-  
+  transition: all 0.2s ease-in-out;
 }
 
-.buttonTertiary:hover {
+.buttonSecondary:hover {
   opacity: .95;
   box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.553);
 }
@@ -136,6 +117,19 @@ svg {
 .colorRed {
   color: var(--red);
   font-weight: 500;
+}
+
+.testmail {
+  margin: 10rem 0;
+}
+.testmail div {
+  color: red;
+}
+
+.testmail button {
+  padding: 1rem 3rem;
+  width: auto;
+  margin: 0 auto;
 }
 
 header {
@@ -256,6 +250,11 @@ header svg {
 .heroFlex h1 {
   color: var(--red);
   padding: 0 0 1.5rem;
+  max-width: 95vw;
+}
+
+.heroFlex p {
+  max-width: 95vw;
 }
 
 .team {
@@ -274,7 +273,7 @@ header svg {
 .team h1 {
   font-family: 'Patua One', cursive;
   font-size: 3.5rem;
-  font-weight: 600;
+
   text-align: center;
   margin: 0 0 1rem;
 }
@@ -360,7 +359,7 @@ header svg {
     url(./images/top-reasons-section-header-bg.jpg);
 }
 
-.ourTechnologySectionHeader {
+.technologySectionHeader {
   background-image: linear-gradient(#0c0c0cd9, #131313c4),
     url(./images/our-tech-section-header-bg.jpg);
 }
@@ -436,6 +435,11 @@ header svg {
 .differenceText h1 {
   color: var(--red);
   margin: 0 0 1.5rem;
+  max-width: 95vw;
+}
+
+.differenceText p {
+  max-width: 95vw;
 }
 
 .ProgessBars {
@@ -469,6 +473,7 @@ header svg {
 
 .progressBar div {
   border-radius: 0.2rem;
+  max-width: 95vw;
 }
 
 .progessBarSpan {
@@ -530,6 +535,7 @@ header svg {
 
 .reason p {
   max-width: 350px;
+  
 }
 
 .technologyWrapper {
@@ -548,9 +554,9 @@ header svg {
   position: relative;
   width: 400px;
   max-width: 95%;
-  height: 600px;
   height: auto;
-  background-color: var(--white);
+  padding: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: .2rem;
   overflow: hidden; 
 }
@@ -565,8 +571,9 @@ header svg {
 
 .technologyImgWrapper {
   width: 100%;
-  height: 218px;
+  height: 175px;
   overflow: hidden;
+  border-radius: .1rem;
 }
 
 .technology img {
@@ -582,10 +589,10 @@ header svg {
 
 .watchVideoButton {
   position: absolute;
-  top: 220px;
+  top: 205px;
   left: 50%;
   transform: translate(-50%, -50%);
-  min-width: 150px;
+  min-width: 180px;
 }
 
 .watchVideoButton svg {
@@ -596,21 +603,27 @@ header svg {
 .technologyFront {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  align-items: center;
+  justify-content: baseline;
+  padding: 2rem 0 0;
+  text-align: center;
   height: 100%;
 }
 
 .technologyHover {
+  text-align: center;
   display: none;
   height: 100%;
   align-items: center;
   flex-direction: column;
+  padding: 1rem 0 0;
   justify-content: center;
 }
 
 .technologyHover p {
+  display: block;
   font-size: 0.8rem;
-  margin: 1rem;
+  padding: 1rem 1rem 0;
 }
 
 .technology:hover .technologyHover {
@@ -629,7 +642,7 @@ header svg {
 .technology:hover {
   transform: translate(0, -0.1rem);
   transition: transform 0.1s;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.368);
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.204);
 }
 
 .technologyVideoWrapper {
@@ -653,12 +666,16 @@ header svg {
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 95%;
+  width: 600px;
+  height: auto;
 }
 
-/* .closeVideo {
+.closeVideo {
+  color: var(--white);
   position: absolute;
-  top: -2rem;
-  right: -2rem;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
   cursor: pointer;
   font-size: 2.5rem;
   font-weight: 900;
@@ -666,7 +683,7 @@ header svg {
 
 .closeVideo::after {
   content: "\00d7";
-} */
+}
 
 .careers {
   margin: 0 auto;
@@ -769,12 +786,14 @@ header svg {
   flex: 1 2;
   font-weight: 600;
   min-width: 250px;
+  max-width: 90vw;
 }
 
 .jobFlex p {
   flex: 2 1;
   min-width: 330px;
   padding: 0 1rem;
+  max-width: 95vw;
 }
 
 .careersFormWrapper {
@@ -851,7 +870,7 @@ select {
 }
 
 .careersForm input[type="submit"]:disabled {
-  background-color: grey;
+  opacity: .5;
 }
 
 .checkBox {
@@ -947,17 +966,21 @@ select {
 }
 
 .contactDetails svg {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: var(--red);
   margin-right: .8rem;
 }
 
-.contactDetails h3 {
+.contactDetails h2 {
   padding: .3rem;
 }
 
 .contactDetails a {
   color: var(--red);
+}
+
+.contactDetails a:hover {
+  color: rgb(223, 54, 54);
 }
 
 footer {
