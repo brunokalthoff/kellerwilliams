@@ -16,7 +16,6 @@ export const CareersForm = ({ jobs, inputs, setInputs }) => {
     const sendEmail = (e) => {
         e.preventDefault();
 
-
         emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, e.target, process.env.REACT_APP_USER_ID)
             .then((result) => {
                 console.log(result.text);
@@ -33,21 +32,19 @@ export const CareersForm = ({ jobs, inputs, setInputs }) => {
     };
 
     const inputValues = [
-        { cb1: 'a', cb2: 'b', cb3: 'c' },
-        { cb1: 'd', cb2: 'e', cb3: 'f' },
-        { cb1: 'g', cb2: 'h', cb3: 'i' },
-        { cb1: 'j', cb2: 'k', cb3: 'l' },
+        { cb1: 'BA in Business or related field', cb2: 'Experience with sales', cb3: 'Strong attention to detail', cb4: 'Experience in a leadership or team lead role that is responsible for holding support teams accountable for superior client experience' },
+        { cb1: 'Mastery of our core agent curriculum, scripts for all aspects of real estate and our company’s models and systems', cb2: 'Record of sales success in the real estate business', },
+        { cb1: 'Experience in conducting Monthly Regional MCA Meetings and one-on-one calls', cb2: 'Minimum 2 years KW MCA Experience and Accounting Experience', },
     ]
 
     const handleSelect = e => {
         console.log(e.target.selectedOptions[0].value)
-        setInputs(e.target.selectedOptions[0].value);
+        setInputs(e.target.selectedOptions[0].id);
     }
 
     const [captcha, setCaptcha] = useState(false);
 
     const onChange = res => {
-        console.log("Captcha value:", res);
         if (res) return setCaptcha(true);
         setCaptcha(false);
     }
@@ -77,9 +74,9 @@ export const CareersForm = ({ jobs, inputs, setInputs }) => {
 
                 <div className="inputWrapper">
                     <label className='label'>Job Title*</label>
-                    <select onChange={handleSelect} value={inputs} name="job_title">
+                    <select onChange={handleSelect} value={jobs[inputs].title} name="job_title">
                         {jobs.map((j, i) => (
-                            <option key={i} value={i}>{j.title}</option>
+                            <option id={i} key={i} value={j.title}>{j.title}</option>
                         ))}
                     </select>
                 </div>
@@ -88,16 +85,19 @@ export const CareersForm = ({ jobs, inputs, setInputs }) => {
                     <label>Message</label>
                     <textarea name="message" rows="4" ref={messageField} placeholder="Enter Your Message" />
                 </div>
-                <h4>Select your skills:</h4>
-                <div className="checkBox">
+                
+              { inputValues[inputs] && <>
+              <h4>Select your skills:</h4>
+              <div className="checkBox">
                     <div>
-                        <label><input type="checkbox" name="cb1" value={inputValues[inputs].cb1} />{inputValues[inputs].cb1}</label>
-
-                        <label><input type="checkbox" name="cb2" value={inputValues[inputs].cb2} />{inputValues[inputs].cb2}</label>
-
-                        <label><input type="checkbox" name="cb3" value={inputValues[inputs].cb3} />{inputValues[inputs].cb3}</label>
+                        {inputValues[inputs].cb1 && <label><input type="checkbox" name="cb1" value={inputValues[inputs].cb1} />{inputValues[inputs].cb1}</label>}
+                        {inputValues[inputs].cb2 && <label><input type="checkbox" name="cb2" value={inputValues[inputs].cb2} />{inputValues[inputs].cb2}</label>}
+                        {inputValues[inputs].cb3 && <label><input type="checkbox" name="cb3" value={inputValues[inputs].cb3} />{inputValues[inputs].cb3}</label>}
+                        {inputValues[inputs].cb4 && <label><input type="checkbox" name="cb4" value={inputValues[inputs].cb4} />{inputValues[inputs].cb4}</label>}
                     </div>
                 </div>
+                </>
+                 }
                 <div>
                     <ReCAPTCHA
                         className='recaptcha'

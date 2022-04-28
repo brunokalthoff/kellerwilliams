@@ -32,6 +32,7 @@ function Hero() {
                         volume={50}
                         muted={true}
                         controls={true}
+                        playing={false}
                         width={'100%'}
                     /></motion.div>
 
