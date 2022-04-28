@@ -53,10 +53,12 @@ export const CareersForm = ({ jobs, inputs, setInputs }) => {
     return (
 
         <div className="careersFormWrapper">
-            <form className='careersForm' onSubmit={sendEmail}>
-                <h1>Interested? Lets talk!</h1>
+
+<h1>Interested? Lets talk!</h1>
                 <h4>Send us your contact information and we will get back to you</h4>
 
+            <form className='careersForm' onSubmit={sendEmail}>
+               
                 <div className="inputWrapper">
                     <label className='label'>Name *</label>
                     <input type="text" name="user_name" ref={nameField} placeholder="Enter Your Name" required />

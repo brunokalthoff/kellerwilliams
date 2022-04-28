@@ -66,7 +66,7 @@ function Careers() {
                                 <motion.h3 layout transition={{ duration: .35 }} style={i === open ? { textAlign: 'center' } : {}}>KW, Milton Market Center</motion.h3>
                             </div>
                             {i !== open && <motion.p layout transition={{ duration: .4 }} className="jobOpenButton"><AiOutlinePlus /></motion.p>}
-                            {i === open && <motion.p layout transition={{ duration: .4 }} className="jobOpenButton"><AiOutlineMinus /></motion.p>}
+                            {i === open && <motion.p layout transition={{ duration: .4 }} style={{top: '1rem', bottom: 'auto'}} className="jobOpenButton"><AiOutlineMinus /></motion.p>}
                         </div>
 
                         {i === open && <motion.div

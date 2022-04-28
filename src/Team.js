@@ -1,6 +1,5 @@
 import React from "react";
 import jerry from './images/Jerry.png';
-import jonah from './images/Jonah.PNG';
 import sillhouette1 from './images/sillhouette1.png';
 import sillhouette2 from './images/sillhouette2.png';
 import sillhouette3 from './images/sillhouette3.png';
@@ -17,13 +16,6 @@ function Team() {
             name: "Jerry Van Leeuwen",
             link: <a className="" href="tel:+1-519-635-4799"><AiFillPhone size={20} />(519)-635-4799</a>
         },
-        {
-            img: jonah,
-            role: "Assistant Team leader",
-            description: "",
-            name: "Jonah Hopkins",
-            link: ""
-        }
     ]
 
     const teamOpen = [

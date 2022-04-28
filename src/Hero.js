@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactPlayer from 'react-player/lazy'
 import { motion } from 'framer-motion';
+import { BsArrowUpRight } from 'react-icons/bs'
 
 function Hero() {
 
@@ -37,6 +38,7 @@ function Hero() {
                     /></motion.div>
 
                 <div className="heroFlex">
+
                     <div>
                         <h1>Mission</h1>
                         <p>Empower our Associates to build thriving businesses, to produce enriched lives and positive exponential impact for our clients.</p>
@@ -45,8 +47,11 @@ function Hero() {
                         <h1>Vision</h1>
                         <p>To be the preferred partner for growth mindset Associates who relentlessly deliver exceptional experiences making us the real estate company of choice for clients.</p>
                     </div>
-                </div>
 
+                </div>
+                <div className='buttonPrimary getStarted'>
+                        <h1>Click here to get started <BsArrowUpRight size={30} /></h1>
+                    </div>
 
             </div>
         </div>
