@@ -1,7 +1,7 @@
 import SectionHeader from "./SectionHeader";
 import ReactPlayer from "react-player/lazy";
 import React, { useState } from "react";
-import { BsFillPlayCircleFill } from 'react-icons/bs';
+import { CgPlayButtonO } from 'react-icons/cg';
 import { motion } from "framer-motion";
 
 function Technology() {
@@ -63,7 +63,7 @@ function Technology() {
         },
     ]
 
-    const [selectedVideo, setSelectedVideo] = useState(videos[0].vid);
+    const [selectedVideo, setSelectedVideo] = useState('');
 
     const handleClick = e => {
         const url = e.target.value;
@@ -90,10 +90,10 @@ function Technology() {
 
                         key={i} className="technology">
                         <div className="technologyImgWrapper">
+                        <button className=" watchVideoButton" value={x.vid} onClick={handleClick}><CgPlayButtonO size={80} /></button>
                             <img src={'http://img.youtube.com/vi/' + x.vid.slice(17) + '/0.jpg'} alt={x.title} />
                         </div>
                         <div className="technologyText">
-                            <button className="buttonSecondary watchVideoButton" value={x.vid} onClick={handleClick}><BsFillPlayCircleFill size={25} />Watch Video</button>
                             <div className="technologyFront">
                                 <h2>{x.title}</h2>
                                 <p>{x.description}</p>
@@ -108,14 +108,15 @@ function Technology() {
                     
                     <div className="technologyVideoPlayer">
                     <div className="closeVideo" />
+                    <h3 className="technologyVideoLoading">Loading video...</h3>
                    <ReactPlayer
+                   style={{zindex: 50}}
                             url={selectedVideo}
                             volume={50}
                             muted={true}
                             controls={true}
                             playing={true}
                             width={'100%'}
-                            fallback={'Loading...'}
                         />
                       
                     </div>

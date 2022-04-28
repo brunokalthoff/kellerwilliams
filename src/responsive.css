@@ -161,8 +161,9 @@
     padding: 3rem 0 5rem;
   }
 
-  .technologyText {
-    height: auto;
+  .technologyHover {
+    justify-content: flex-end;
+    overflow: scroll;
   }
   .technologyWrapper {
     padding: 5rem 0;
