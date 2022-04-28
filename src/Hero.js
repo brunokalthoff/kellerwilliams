@@ -50,7 +50,9 @@ function Hero() {
 
                 </div>
                 <div className='buttonPrimary getStarted'>
+                <a href="https://pages.kw.com/jerry-van-leeuwen/456631/c97sjueojc6fmk0ois5g.html" target="_blank" rel="noreferrer">
                         <h1>Click here to get started <BsArrowUpRight size={30} /></h1>
+                        </a>
                     </div>
 
             </div>

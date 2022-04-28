@@ -11,7 +11,7 @@
   --white: #fdf8f8;
   --white: #fafafa;
   --bgColor: rgb(247, 245, 245);
-  --bgColor: #fff;
+  /* --bgColor: #fff; */
 }
 
 html {
@@ -250,6 +250,7 @@ header > div {
 
 .getStarted h1 {
   font-size: 1.9rem;
+  color: var(--white);
 }
 
 .team {
@@ -551,6 +552,7 @@ header > div {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 0.2rem;
   overflow: hidden;
+  background-color: var(--bgColor);
 }
 
 .technology h2 {
@@ -804,13 +806,13 @@ header > div {
 }
 
 .jobForm {
-  margin: 15rem 0 7.5rem;
+  padding: 7.5rem 0 0;
 }
 
 .careersFormWrapper {
   background-color: white;
   padding: 5rem 0;
-  margin: 7.5rem 0 5rem;
+  margin: 7.5rem 0 0;
 }
 
 .careersForm {
@@ -911,8 +913,6 @@ select {
   padding: 1rem;
   margin: 0 0 0.5rem;
   border-radius: 1rem;
-  
-  background-color: rgba(223, 216, 216, 0.112);
   background-color: var(--white);
 }
 
@@ -977,7 +977,7 @@ select {
 .contact {
   background-color: #52525114;
   border-top: 0.25rem solid var(--red);
-  padding: 7.5rem 0 7.5rem;
+  padding: 7.5rem 0;
 }
 
 .contactDetails {
