@@ -66,16 +66,6 @@ function Technology() {
 
     const [selectedVideo, setSelectedVideo] = useState('');
 
-    // const handleClick = async e => {
-    //     await setSelectedVideo(e.target.id);
-    //     document.querySelector('.technologyVideoWrapper').style.display = 'block';
-    // }
-
-    // const handleCloseClick = async () => {
-    //     await setSelectedVideo('');
-    //     document.querySelector('.technologyVideoWrapper').style.display = 'none';
-    // }
-
     return (
         <>
             <SectionHeader headline="Our Technology" background="technologySectionHeader" />
@@ -116,7 +106,7 @@ function Technology() {
                         animate={{ opacity: 1 }}
                         transition={{ duration: .5 }}
                         className="technologyVideoPlayer">
-                        <div className="closeVideo"><AiOutlineClose size={20} /></div>    
+                        <div className="closeVideo"><AiOutlineClose size={20} /></div>
                         <h3 className="technologyVideoLoading">Loading video...</h3>
                         <ReactPlayer
                             url={selectedVideo}
@@ -125,7 +115,6 @@ function Technology() {
                             controls={true}
                             playing={true}
                             width={'100%'}
-                           
                         />
                     </motion.div>
                 </motion.div>}
