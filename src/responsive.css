@@ -11,7 +11,7 @@
   }
 
   .heroFlex {
-    margin: 8rem 0;
+    margin: 10rem 0;
   }
 
   .team {
@@ -62,14 +62,13 @@
   .careers > h1 {
     font-size: 2.5rem;
     text-align: center;
-    padding: 7.5rem 0 5rem;
+
     font-weight: 600;
   }
 
   .job {
     padding: 0 1rem;
     max-width: 100%;
-
   }
 
   .jobTitle {
@@ -101,8 +100,15 @@
 
   .careersFormWrapper {
     background-color: white;
-    margin: 5rem 0 0;
-    padding: 4rem 0;
+    padding: 2rem 0;
+    margin: 7.5rem auto 0;
+  }
+
+  .careersFormWrapper h1 {
+    padding: 2rem .5rem 0;
+  }
+  .careersFormWrapper h3 {
+    padding: 1rem .5rem 3rem;
   }
 
   .jobOpenButton {
@@ -136,12 +142,22 @@
   .contactDetails svg {
     font-size: 2rem;
   }
-
 }
 @media only screen and (max-width: 530px) {
 
 .splitButton span {
   display: none;
+}
+.splitButton {
+  gap: .5rem;
+}
+.heroHeadline {
+  text-align: center;
+}
+
+.getStarted {
+  font-size: 1.3rem;
+  margin: 10rem auto;
 }
 }
 
@@ -160,7 +176,7 @@
   }
 
   .heroFlex {
-    margin: 5rem 0;
+    margin: 7.5rem 0;
   }
 
   .team {
@@ -184,7 +200,7 @@
   }
   .technologyWrapper {
     padding: 5rem 0;
-    gap: 5rem;
+    gap: 3rem;
   }
 
   .reasonsWrapper {
@@ -201,6 +217,10 @@
     gap: 2rem;
   }
 
+  .jobTitle {
+    padding: 0;
+  }
+
   .jobFlex {
     flex-direction: column;
   }
@@ -209,14 +229,25 @@
     flex: 1 2;
     font-weight: 600;
     min-width: auto;
+    width: 100%;
     max-width: 90vw;
+    text-align: center;
   }
   .jobFlex p {
     min-width: auto;
+    width: 100%;
   }
 
   .jobForm {
     padding: 0 0 3rem;
+  }
+
+  .careers {
+    padding: 2rem 0 0;
+  }
+
+  .careersButtons {
+    margin: 0 auto 5rem;
   }
 
   .careers > h1 {

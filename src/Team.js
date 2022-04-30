@@ -63,7 +63,7 @@ function Team() {
             <div className="teamFlex">
                 {teamOpen.map((x, i) => (
                     <motion.div
-                        initial={{ x: -300, y: 300, opacity: 0 }}
+                        initial={{ x: -100, y: 100, opacity: 0 }}
                         whileInView={{ x: 0, y: 0, opacity: 1 }}
                         transition={{ delay: i * 0.1, type: "spring", stiffness: 100 }}
                         viewport={{ once: true }}
@@ -78,7 +78,11 @@ function Team() {
                 ))}
 
             </div>
-            <a href="#careers" className="buttonPrimary">Apply here</a>
+            <motion.a
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                href="#careers" className="buttonSecondary">Apply here</motion.a>
         </div>
     );
 }

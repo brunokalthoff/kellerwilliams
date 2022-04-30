@@ -5,27 +5,29 @@ import { BsArrowUpRight } from 'react-icons/bs';
 
 
 function Hero() {
-
     return (
         <div className="hero">
             <div className="heroWrapper">
                 <motion.div
                     className="heroHeadline">
                     <motion.h1
-                        initial={{ y: 30, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        transition={{ delay: 0.5, type: "spring", stiffness: 30 }}
-                    >Keller Williams. Your <motion.span
+                    initial={{ y: -50, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ delay: .5, type: 'spring', bounce: 0, stiffness: 25 }}
+                    >Keller Williams.<br />
+                    Your {["T","h","r","i","v","i","n","g"," ","B","u","s","i","n","e","s","s"].map((x,i)=>{
+                        return <motion.span
                         className='colorRed'
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ delay: 0.8, ease: 'easeOut', duration: 2, }}
-                    >Thriving Business</motion.span> is our Mission</motion.h1>
+                        transition={{delay: i * 0.105}}
+                        >{x}</motion.span>
+                    })}<br />is our Mission.</motion.h1>
                 </motion.div>
                 <motion.div
-                    initial={{ x: 300, opacity: 0 }}
-                    whileInView={{ x: 0, opacity: 1 }}
-                    transition={{ type: "spring", stiffness: 50 }}
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{delay:.3}}
                     viewport={{ once: true }}
                     className="introVideoWrapper">
                     <ReactPlayer
@@ -54,13 +56,11 @@ function Hero() {
                 <motion.a
                     href="https://pages.kw.com/jerry-van-leeuwen/456631/c97sjueojc6fmk0ois5g.html" target="_blank" rel="noreferrer">
                     <motion.div
-                    initial={{ x: -500, opacity: 0 }}
-                    whileInView={{ x: 0, opacity: 1 }}
-                    transition={{ type: "spring", stiffness: 100 }}
-                    viewport={{ once: true }}
-                    className='getStarted buttonPrimary'>  Click here to get started<BsArrowUpRight size={25} /></motion.div>
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true }}
+                        className='getStarted'>Click here to get started<BsArrowUpRight size={25} /></motion.div>
                 </motion.a>
-
 
             </div>
         </div>

@@ -58,10 +58,13 @@ p {
 a {
   text-decoration: none;
   color: var(--red);
+}
+
+.linkred {
   filter: brightness(1.3);
 }
 
-a:hover {
+.linkred:hover {
   filter: brightness(1.1);
 }
 
@@ -71,44 +74,46 @@ svg {
 }
 
 .boxShadow {
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.368);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.071);
 }
 
 .buttonPrimary {
   /* background-image: linear-gradient(to bottom, #b55d5d, #9f0101); */
   background-color: var(--red);
   filter: brightness(1.3);
+  border-radius: 1rem;
   color: var(--white);
   opacity: 0.85;
+  font-weight: 500;
   border: none;
   padding: 1.5rem 3rem;
   cursor: pointer;
-  box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.49);
+  /* box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.49); */
   transition: all 0.1s ease-in-out;
   text-decoration: none;
 }
 
 .buttonPrimary:hover {
-  filter: brightness(1.1);
-  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.49);
+  /* box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.49); */
   transform: scale(1.02);
 }
 
 .buttonSecondary {
-  font-weight: 600;
-  background-color: var(--black);
-  color: var(--white);
-  opacity: 0.95;
-  padding: 0.75rem 1.5rem;
-  border: none;
+  border: solid var(--red);
+  filter: brightness(1.3);
+  border-radius: 1rem;
+  color: var(--red);
+  font-weight: 500;
+  /* border: none; */
+  padding: 1.5rem 3rem;
   cursor: pointer;
-  box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.49);
-  transition: all 0.2s ease-in-out;
+  /* box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.49); */
+  transition: all 0.1s ease-in-out;
+  text-decoration: none;
 }
 
 .buttonSecondary:hover {
-  opacity: 0.95;
-  box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.553);
+  transform: scale(1.02);
 }
 
 .colorBlack {
@@ -148,7 +153,6 @@ header > div {
 }
 
 .splitButton {
-  color: var(--red);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -158,26 +162,27 @@ header > div {
 
 .splitButton a {
   min-width: fit-content;
-  color: black;
   width: 50%;
+  border-radius: .5rem;
+  font-size: .9rem;
 }
 
 .splitButton svg {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   vertical-align: middle;
   cursor: pointer;
   color: var(--red);
+  filter: brightness(1.3);
   vertical-align: middle;
+  transition: all 0.2s;
 }
 .splitButton span {
   color: var(--black);
   margin-left: 0.3rem;
 }
 
-.splitButton a:hover {
-  transform: scale(1.1);
-  filter: brightness(1.15);
-  transition: all 0.2s;
+.splitButton a:hover svg {
+  filter: brightness(1.1);
 }
 
 .hero {
@@ -185,7 +190,7 @@ header > div {
   position: relative;
   overflow: hidden;
   background-color: var(--white);
-  box-shadow: inset 0px 5px 5px rgba(0, 0, 0, 0.09);
+  box-shadow: inset 0px 1px 5px rgba(0, 0, 0, 0.037);
 }
 
 .heroWrapper {
@@ -203,10 +208,11 @@ header > div {
 
 .heroHeadline h1 {
   font-family: "Roboto", sans-serif;
-  font-size: 4rem;
+  font-size: 3.5rem;
   color: var(--black);
   max-width: 700px;
   font-weight: 500;
+  padding-bottom: 4rem;
 }
 
 .introVideoWrapper {
@@ -221,7 +227,7 @@ header > div {
 
 .heroFlex {
   display: flex;
-  flex-wrap: wrap-reverse;
+  flex-wrap: wrap;
   align-items: stretch;
   justify-content: space-between;
   margin: 12rem 0;
@@ -230,30 +236,43 @@ header > div {
 
 .heroFlex div {
   text-align: center;
-  flex: 1;
   min-width: 350px;
+  max-width: 80vw;
+  margin: 0 auto;
 }
 
 .heroFlex h1 {
   color: var(--red);
   padding: 0 0 1.5rem;
-  max-width: 95vw;
 }
 
 .heroFlex p {
-  max-width: 95vw;
+  max-width: 450px;
+  margin: 0 auto;
 }
 
 .getStarted {
-  margin: 7.5rem auto 12rem;
+  margin: 0 auto 10rem;
   width: fit-content;
-  font-size: 1.8rem;
-
+  font-size: 1.5rem;
+  background-color: var(--red);
+  filter: brightness(1.3);
+  color: var(--white);
+  opacity: 0.85;
+  border: none;
+  padding: 1.5rem 2.5rem;
+  cursor: pointer;
+  /* box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.49); */
+  transition: all 0.1s ease-in-out;
+  text-decoration: none;
+border-radius: 1rem;
 }
 
-/* .getStarted:hover {
+.getStarted:hover {
   filter: brightness(1.1);
-} */
+  /* box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.49); */
+  transform: scale(1.02);
+}
 
 .getStarted svg {
   margin: 0 .5rem .5rem;
@@ -269,7 +288,7 @@ header > div {
 }
 
 .team > a {
-  margin: 5rem auto;
+  margin: 7.5rem auto;
 }
 
 .team h1 {
@@ -320,10 +339,11 @@ header > div {
 
 .avatar a {
   line-height: 5rem;
+  filter: brightness(1.3);
 }
 
-.buttonAvatar {
-  color: var(--white);
+.avatar a:hover {
+  filter: brightness(1.1);
 }
 
 .sectionHeader {
@@ -333,7 +353,9 @@ header > div {
   text-align: center;
   background-position: center center;
   background-size: cover;
-  opacity: 0.77;
+  opacity: 0.9;
+  /* border-bottom: 0.25rem solid var(--red);
+  border-top: 0.25rem solid var(--red); */
 }
 
 .sectionHeader h1 {
@@ -349,22 +371,22 @@ header > div {
 
 .trainingAndCoachingSectionHeader {
   /* linear-gradient(#c9312cd9, #c9312cc4), */
-  background-image: linear-gradient(#0c0c0cd9, #131313c4),
+  background-image: linear-gradient(#0c0c0cc7, #131313e6),
     url(./images/training-section-header-bg.jpg);
 }
 
 .topReasonsSectionHeader {
-  background-image: linear-gradient(#0c0c0cd9, #131313c4),
+  background-image: linear-gradient(#0c0c0cc7, #131313e6),
     url(./images/top-reasons-section-header-bg.jpg);
 }
 
 .technologySectionHeader {
-  background-image: linear-gradient(#0c0c0cd9, #131313c4),
+  background-image: linear-gradient(#0c0c0cc7, #131313e6),
     url(./images/our-tech-section-header-bg.jpg);
 }
 
 .careersSectionHeader {
-  background-image: linear-gradient(#0c0c0cd9, #131313c4),
+  background-image: linear-gradient(#0c0c0cc7, #131313e6),
     url(./images/join-us-section-header-bg.jpeg);
 }
 
@@ -544,7 +566,7 @@ header > div {
   align-items: stretch;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 3rem 1.5rem;
+  gap: 7.5rem 3rem;
 }
 
 .technology {
@@ -554,10 +576,10 @@ header > div {
   height: auto;
   min-width: 300px;
   padding: 2rem;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  /* border: 1px solid rgba(0, 0, 0, 0.1); */
   border-radius: 0.2rem;
   overflow: hidden;
-  background-color: var(--bgColor);
+  background-color: white;
 }
 
 .technology h2 {
@@ -697,13 +719,27 @@ header > div {
 
 .careers {
   margin: 0 auto;
+  padding: 7.5rem 0;
   background-color: var(--white);
 }
 
 .careers > h1 {
   font-weight: 500;
   text-align: center;
-  padding: 7.5rem 0 4.5rem;
+}
+
+.careersButtons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  margin: 3rem auto 5rem;
+  gap: 1rem;
+}
+
+.careersButtons button:nth-last-of-type(1) {
+  padding: 1.8rem 3rem;
 }
 
 .job {
@@ -714,8 +750,10 @@ header > div {
   border-radius: 1rem;
   border: 1px solid rgba(0, 0, 0, 0.075);
   background-color: white;
-  /* border-bottom: 1px solid rgba(0, 0, 0, 0.477); */
-  /* border-top: 1px solid rgba(0, 0, 0, 0.477); */
+}
+
+.jobClosed:hover{
+  transform: translate(-1px, 1px);
 }
 
 .jobToggle hr {
@@ -729,7 +767,7 @@ header > div {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 4rem 0;
+  padding: 3rem 0;
   cursor: pointer;
 }
 
@@ -744,6 +782,7 @@ header > div {
 .jobTitle h2 {
   max-width: 500px;
   text-align: left;
+  padding: 1rem 0;
 }
 
 .jobTitle h3 {
@@ -767,7 +806,7 @@ header > div {
 
 .jobOpenButton svg {
   margin: 0;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 
 .jobOpenButtonLow {
@@ -779,6 +818,7 @@ header > div {
   cursor: pointer;
   color: var(--red);
   filter: brightness(1.3);
+  font-size: 1.5rem;
 }
 
 .jobOpenButtonLow:hover {
@@ -787,13 +827,14 @@ header > div {
 
 .jobToggle {
   position: relative;
-  padding: 0 0 2rem;
+  padding: 3rem 0;
 }
 
 .jobToggle button {
   display: block;
   width: auto;
   margin: 3rem auto;
+  font-weight: 500;
 }
 
 .jobFlex {
@@ -825,8 +866,11 @@ header > div {
 
 .careersFormWrapper {
   background-color: white;
-  padding: 7.5rem 0;
-  margin: 7.5rem 0 0;
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: fit-content;
+  width: 95%;
+  border-radius: 1rem;
 }
 
 .careersForm {
@@ -838,18 +882,19 @@ header > div {
   max-width: 600px;
   width: 95%;
   margin: 0 auto;
+  padding: 0 0 2rem;
 }
 
 .careersFormWrapper h1 {
   font-weight: 500;
   width: 100%;
   text-align: center;
-  padding: 0;
+  padding: 3rem 0 0;
 }
-.careersFormWrapper h4 {
+.careersFormWrapper h3 {
   width: 100%;
   text-align: center;
-  padding: 0.5rem 0 2rem;
+  padding: 1rem 0 3rem;
 }
 
 .careersForm div {
@@ -890,7 +935,7 @@ select {
 
 .careersForm input[type="checkbox"] {
   accent-color: var(--red);
-  padding: .5rem;
+  padding: 0 0 .5rem;
 }
 
 .careersForm input[type="submit"] {
@@ -899,21 +944,35 @@ select {
 }
 
 .careersForm input[type="submit"]:disabled {
-  opacity: 0.5;
+  opacity: 0.8;
+}
+
+.careersForm input[type="submit"]:disabled:hover {
+  transform: scale(1);
 }
 
 .checkBox {
-  padding: 0 0 2rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0 1rem;
+  gap: .5rem;
+}
+
+.checkBox h4 {
+padding: .5rem;
+display: inline-block;
+width: fit-content;
+
 }
 
 .checkBox div {
   display: inline-flex;
   flex-direction: column;
-  width: fit-content;
+  justify-content: flex-start;
+  align-items: baseline;
+  flex: 4;
 }
 
 .checkBox input {
@@ -923,10 +982,7 @@ select {
 .checkBox label {
   display: flex;
   align-items: baseline;
-  padding: 1rem;
-  margin: 0 0 0.5rem;
-  border-radius: 1rem;
-  background-color: var(--white);
+  padding: .5rem;
 }
 
 .recaptcha {

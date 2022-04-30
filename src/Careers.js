@@ -3,6 +3,7 @@ import SectionHeader from "./SectionHeader";
 import CareersForm from "./CareersForm";
 import { motion } from "framer-motion";
 import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai'
+import { AiFillPhone, AiFillMail } from 'react-icons/ai';
 
 
 function Careers() {
@@ -10,9 +11,9 @@ function Careers() {
     const jobs = [
         {
             title: "Team Leader (m/f/d)",
-            intro: <>Keller Williams Capital Properties, the fastest growing franchise group within the Keller Williams Realty International system, is actively seeking Team Leaders (TL) to lead and grow high-achieving and well-established Market Center offices in the Washington, DC, metro area. The right candidate may also have the opportunity to grow the company by helping to open new offices in the region. This key individual will serve on the leadership team for all of KWCP, currently with six different locations across DC, Maryland, and Virginia, with nearly 1,000 licensed real estate agents.<br/><br/>The TL will be primarily focused on maintaining aggressive growth in the number of licensed real estate agents within the organization, with managing the entire leadership team within the Market Center, and with building strong consultative relationships with the top agents in the office. The TL will be excellent at casting a big vision and leading their team towards that vision while managing the achievement of critical milestones along the path to success. The next successful TL will have high capacity in interpersonal relationships and will be an inspirational and effective oral and written communicator.</>,
-            duties: <ul>The TL is a senior role within KWCP, and will be responsible for: <br/><br/><li>Leading strategic initiatives to rapidly recruit high producing and high potential real estate agents to the office</li><li>Oversee the hiring, leadership and development of the staff as well as ensure they are properly trained and held accountable to KWCP’s high performance standards</li><li>Manage and accelerate the financial performance of the office, paying close attention to, and making necessary adjustments to key financial indicators, to maximize profitability</li><li>Provide business development and financial management consulting to top agents with the office, helping them make dramatic growth in their personal production and performance</li><li>Promote a strong learning based environment and ensure that agents have access to top of the line training and educational opportunities</li><li>Maintain a positive and empowering environment that both challenges associates to reach their potential, and also provides for a caring, people-first, atmosphere</li></ul>,
-            skills: <ul><li>Have in-depth, high level, proven growth and leadership capabilities</li><li>Experience in a high-growth or start-up environment preferred</li><li>Ability to build powerful relationships and recruit effectively and consistently</li><li>Strong verbal leadership and communication skills and social poise</li><li>Although a background in real estate sales is preferred, a candidate with an exceptional track record in another endeavor, who also possesses exceptional leadership skills, will also be considered</li><li>Proven ability to work in a collaborative team setting as well as drive work individually</li><li>Bachelor’s Degree preferred</li><br/>Top candidates will be natural leaders, influencers, and teachers. They will be self-motivated and naturally high-achievers, who value the team over the individual. They will be persuasive and will persevere, will act ethically with personal integrity, and with a high regard for others. The ideal candidate will be seeking unlimited opportunity and will be committed to attaining the highest level of results.</ul>,
+            intro: <>Keller Williams Capital Properties, the fastest growing franchise group within the Keller Williams Realty International system, is actively seeking Team Leaders (TL) to lead and grow high-achieving and well-established Market Center offices in the Washington, DC, metro area. The right candidate may also have the opportunity to grow the company by helping to open new offices in the region. This key individual will serve on the leadership team for all of KWCP, currently with six different locations across DC, Maryland, and Virginia, with nearly 1,000 licensed real estate agents.<br /><br />The TL will be primarily focused on maintaining aggressive growth in the number of licensed real estate agents within the organization, with managing the entire leadership team within the Market Center, and with building strong consultative relationships with the top agents in the office. The TL will be excellent at casting a big vision and leading their team towards that vision while managing the achievement of critical milestones along the path to success. The next successful TL will have high capacity in interpersonal relationships and will be an inspirational and effective oral and written communicator.</>,
+            duties: <ul>The TL is a senior role within KWCP, and will be responsible for: <br /><br /><li>Leading strategic initiatives to rapidly recruit high producing and high potential real estate agents to the office</li><li>Oversee the hiring, leadership and development of the staff as well as ensure they are properly trained and held accountable to KWCP’s high performance standards</li><li>Manage and accelerate the financial performance of the office, paying close attention to, and making necessary adjustments to key financial indicators, to maximize profitability</li><li>Provide business development and financial management consulting to top agents with the office, helping them make dramatic growth in their personal production and performance</li><li>Promote a strong learning based environment and ensure that agents have access to top of the line training and educational opportunities</li><li>Maintain a positive and empowering environment that both challenges associates to reach their potential, and also provides for a caring, people-first, atmosphere</li></ul>,
+            skills: <ul><li>Have in-depth, high level, proven growth and leadership capabilities</li><li>Experience in a high-growth or start-up environment preferred</li><li>Ability to build powerful relationships and recruit effectively and consistently</li><li>Strong verbal leadership and communication skills and social poise</li><li>Although a background in real estate sales is preferred, a candidate with an exceptional track record in another endeavor, who also possesses exceptional leadership skills, will also be considered</li><li>Proven ability to work in a collaborative team setting as well as drive work individually</li><li>Bachelor’s Degree preferred</li><br />Top candidates will be natural leaders, influencers, and teachers. They will be self-motivated and naturally high-achievers, who value the team over the individual. They will be persuasive and will persevere, will act ethically with personal integrity, and with a high regard for others. The ideal candidate will be seeking unlimited opportunity and will be committed to attaining the highest level of results.</ul>,
         },
         {
             title: "Productivity Coach (m/f/d)",
@@ -27,7 +28,7 @@ function Careers() {
             skills: <ul><li>Knows the systems, tools, and conversations of the Growth Initiative and Career Growth Initiative</li><li>Strategic, supportive leader</li><li>Full charge bookkeeper</li><li>1–3 years industry, financial, administrative, and management experience</li><li>Strong written and verbal communication skills</li><li>People oriented and a positive, proactive problem-solver</li><li>Detailed oriented</li><li>Technologically savvy</li><li>High school graduate, college graduate preferred</li></ul>,
         },
         {
-            title: "Market Centre Administrator Tech Trainer  (m/f/d) - To follow",
+            title: "Market Centre Administrator Tech Trainer  (m/f/d)",
             intro: '',
             duties: '',
             skills: '',
@@ -35,10 +36,10 @@ function Careers() {
     ]
 
     const [inputs, setInputs] = useState(0);
-    const changeInputs = e => {
-        setInputs(e.target.id);
-        document.querySelector(".careersForm").scrollIntoView();
-    }
+    // const changeInputs = e => {
+    //     setInputs(e.target.id);
+    //     document.querySelector(".careersForm").scrollIntoView();
+    // }
 
     const [open, setOpen] = useState(null);
     const handleClose = e => {
@@ -53,20 +54,24 @@ function Careers() {
 
 
                 <h1>Join Us!</h1>
+                <div className="careersButtons">
+                    <a className="buttonSecondary" href='tel:+1-519-635-4799'><AiFillPhone />Call us</a>
+                    <button onClick={() => document.querySelector(".careersFormWrapper").scrollIntoView()} className="buttonPrimary" >Apply here</button>
+                </div>
 
                 {jobs.map((x, i) => (
-                    <div key={i} id={`job${i}`} className="job">
+                    <div key={i} id={`job${i}`} className={i === open ? "job boxShadow" : "job boxShadow jobClosed"}>
                         <div onClick={() => setOpen(prev => {
-                                if (prev === i) return null;
-                                else return i;
-                            })} className={i === open ? "jobTitle jobTitleOpen" : "jobTitle"}>
+                            if (prev === i) return null;
+                            else return i;
+                        })} className={i === open ? "jobTitle jobTitleOpen" : "jobTitle"}>
                             <motion.h2 style={i === open ? { color: "var(--black)", textAlign: "center", fontSize: "2rem" } : {}} layout="position" transition={{ duration: .3 }}>{x.title}</motion.h2>
                             <div>
                                 <motion.h3 layout transition={{ duration: .3 }} style={i === open ? { textAlign: 'center' } : {}}>Canada</motion.h3>
                                 <motion.h3 layout transition={{ duration: .35 }} style={i === open ? { textAlign: 'center' } : {}}>KW, Milton Market Center</motion.h3>
                             </div>
                             {i !== open && <motion.p layout transition={{ duration: .4 }} className="jobOpenButton"><AiOutlinePlus /></motion.p>}
-                            {i === open && <motion.p layout transition={{ duration: .4 }} style={{top: '1rem', bottom: 'auto'}} className="jobOpenButton"><AiOutlineMinus /></motion.p>}
+                            {i === open && <motion.p layout transition={{ duration: .4 }} style={{ top: '1rem', bottom: 'auto' }} className="jobOpenButton"><AiOutlineMinus /></motion.p>}
                         </div>
 
                         {i === open && <motion.div
@@ -76,7 +81,7 @@ function Careers() {
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.3 }}
                         >
-                            <button id={i} className="buttonPrimary" onClick={changeInputs}>Apply here</button>
+                            {/* <button id={i} className="buttonSecondary" onClick={changeInputs}>Apply here</button> */}
                             {i !== 3 && (
                                 <>
                                     <div className="jobFlex"><h3>Who are we looking for?</h3><p>{x.intro}</p></div>
@@ -84,14 +89,15 @@ function Careers() {
                                     <div className="jobFlex"><h3>Main responsibilities and duties</h3><p>{x.duties}</p></div>
                                     <hr />
                                     <div className="jobFlex"><h3>Skills & Qualifications</h3><p>{x.skills}</p></div>
-                                    <button id={i} style={{ marginTop: '5rem' }} className="buttonPrimary" onClick={changeInputs}>Apply here</button>
-                                    <AiOutlineMinus className="jobOpenButtonLow" id={i} onClick={handleClose} size={30} />
+                                    {/* <button id={i} style={{ marginTop: '5rem' }} className="buttonSecondary" onClick={changeInputs}>Apply here</button> */}
+                                    <AiOutlineMinus className="jobOpenButtonLow" id={i} onClick={handleClose} />
                                 </>
                             )
                             }
+                            {i === 3 && <h3 style={{ textAlign: 'center' }}>To Follow</h3>}
 
                         </motion.div>}
-                            {/* <hr /> */}
+                        {/* <hr /> */}
                     </div>
                 ))}
                 <div className="jobForm">
