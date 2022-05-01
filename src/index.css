@@ -28,8 +28,9 @@ body {
 ul {
   list-style-position: outside;
 }
+
 li {
-  padding: 0.3rem 0.3rem;
+  padding: 0.3rem 0;
 }
 
 h1,
@@ -975,14 +976,19 @@ width: fit-content;
   flex: 4;
 }
 
-.checkBox input {
-  margin: 0.5rem;
-}
-
 .checkBox label {
   display: flex;
   align-items: baseline;
   padding: .5rem;
+  gap: 1rem;
+}
+
+.checkBox input {
+  flex-shrink: 0;
+}
+
+.checkBox input {
+padding: 0;
 }
 
 .recaptcha {

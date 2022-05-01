@@ -94,10 +94,10 @@ export const CareersForm = ({ jobs, inputs, setInputs }) => {
                     <div className="checkBox">
                         <h4>Skills</h4>
                         <div>
-                            {inputValues[inputs].cb1 && <label><input type="checkbox" name="cb1" value={inputValues[inputs].cb1} />{inputValues[inputs].cb1}</label>}
-                            {inputValues[inputs].cb2 && <label><input type="checkbox" name="cb2" value={inputValues[inputs].cb2} />{inputValues[inputs].cb2}</label>}
-                            {inputValues[inputs].cb3 && <label><input type="checkbox" name="cb3" value={inputValues[inputs].cb3} />{inputValues[inputs].cb3}</label>}
-                            {inputValues[inputs].cb4 && <label><input type="checkbox" name="cb4" value={inputValues[inputs].cb4} />{inputValues[inputs].cb4}</label>}
+                            {inputValues[inputs].cb1 && <label><input type="checkbox" name="cb1" value={inputValues[inputs].cb1} /><p>{inputValues[inputs].cb1}</p></label>}
+                            {inputValues[inputs].cb2 && <label><input type="checkbox" name="cb2" value={inputValues[inputs].cb2} /><p>{inputValues[inputs].cb2}</p></label>}
+                            {inputValues[inputs].cb3 && <label><input type="checkbox" name="cb3" value={inputValues[inputs].cb3} /><p>{inputValues[inputs].cb3}</p></label>}
+                            {inputValues[inputs].cb4 && <label><input type="checkbox" name="cb4" value={inputValues[inputs].cb4} /><p>{inputValues[inputs].cb4}</p></label>}
                         </div>
                     </div>
                     <div style={{ borderBottom: '1px solid black', opacity: .1 }} />

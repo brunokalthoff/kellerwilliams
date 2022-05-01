@@ -17,6 +17,7 @@ function Hero() {
                     >Keller Williams.<br />
                     Your {["T","h","r","i","v","i","n","g"," ","B","u","s","i","n","e","s","s"].map((x,i)=>{
                         return <motion.span
+                        key={i}
                         className='colorRed'
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}

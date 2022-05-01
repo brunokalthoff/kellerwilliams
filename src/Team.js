@@ -22,10 +22,8 @@ function Team() {
         {
             img: sillhouette1,
             role: "Team Leader (m/f/d)",
-
             name: "YOU?",
             link: ""
-            // link: <a href="#careers">CAREERS &#8250;</a>
         },
         {
             img: sillhouette2,
@@ -33,7 +31,6 @@ function Team() {
             description: "",
             name: "YOU?",
             link: ""
-            // link: <a href="#careers">CAREERS &#8250;</a>
         },
         {
             img: sillhouette3,
@@ -41,7 +38,6 @@ function Team() {
             description: "",
             name: "YOU?",
             link: ""
-            // link: <a href="#careers">CAREERS &#8250;</a>
         },
     ]
 
@@ -82,7 +78,7 @@ function Team() {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                href="#careers" className="buttonSecondary">Apply here</motion.a>
+                href="#careers" className="buttonSecondary">Join us</motion.a>
         </div>
     );
 }
