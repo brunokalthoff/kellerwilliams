@@ -1,3 +1,24 @@
+@media only screen and (max-width: 1230px) {
+  .heroHeroFlex h1 {
+    font-size: 2.3rem;
+  }
+  }
+
+@media only screen and (max-width: 1031px) {
+.heroHeroFlex {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.heroHeroFlex {
+  padding: 2rem 0 5rem;
+}
+
+.heroFlex h1 {
+  font-size: 2rem;
+    }
+}
+
 @media only screen and (max-width: 850px) {
   li::before { 
     content: '•';
@@ -8,9 +29,6 @@
     list-style-type:none;
   }
   
-  .heroFlex h1 {
-font-size: 2rem;
-  }
 
   .team {
     padding: 7rem 0;
@@ -140,19 +158,6 @@ font-size: 2rem;
   .contactDetails svg {
     font-size: 2rem;
   }
-}
-
-@media only screen and (max-width: 1031px) {
-.heroHeroFlex {
-  flex-wrap: wrap;
-  justify-content: center;
-}
-}
-
-@media only screen and (max-width: 1230px) {
-.heroHeroFlex h1 {
-  font-size: 2.3rem;
-}
 }
 
 @media only screen and (max-width: 430px) {

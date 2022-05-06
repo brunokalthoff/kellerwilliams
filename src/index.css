@@ -205,8 +205,8 @@ header > div {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 0;
-  gap: 3rem;
+  padding: 2rem 0;
+  gap: 2rem;
   /* background-color: rgba(0, 0, 0, 0.388); */
 }
 
@@ -232,7 +232,7 @@ header > div {
   flex-wrap: wrap;
   align-items: stretch;
   justify-content: space-between;
-  gap: 5rem;
+  gap: 3rem;
 }
 
 .heroFlex div {
