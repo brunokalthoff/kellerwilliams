@@ -10,7 +10,8 @@ function Contact(props) {
                 <div className="contactDetails">
                     <h1>Contact</h1>
                     <h3><AiFillPhone /><a href="tel:+1-519-635-4799">(519)-635-4799</a></h3>
-                    <h3><AiFillMail /> <a href="https://pages.kw.com/jerry-van-leeuwen/456631/c97sjueojc6fmk0ois5g.html" target="_blank" rel="noreferrer">Send us an email <BsArrowUpRight size={'1.2rem'} /></a></h3>
+                    <h3><AiFillMail />jerry.j.vanleeuwen@gmail.com
+</h3>
                     <h3><MdLocationPin />Milton location coming soon</h3>
                 </div>
             </div>

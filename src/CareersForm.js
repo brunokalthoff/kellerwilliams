@@ -23,11 +23,10 @@ export const CareersForm = ({ jobs, inputs, setInputs }) => {
                 emailField.current.value = '';
                 phoneField.current.value = '';
                 messageField.current.value = '';
-                document.querySelector('.formSuccess').style.display = 'block';
+                document.querySelector('#careersFormSuccess').style.display = 'block';
             }, (error) => {
                 console.log(error.text);
-                document.querySelector('.formError').style.display = 'block';
-
+                document.querySelector('#careersFormError').style.display = 'block';
             });
     };
 
@@ -111,8 +110,8 @@ export const CareersForm = ({ jobs, inputs, setInputs }) => {
                     />
                 </div>
                 <input className='buttonPrimary' type="submit" value="Submit" disabled={!captcha} />
-                <div className="formSuccess"><div><FiSend size={80} /></div><AiFillCloseCircle size={30} className='closeSuccess' onClick={() => document.querySelector('.formSuccess').style.display = 'none'} /><h2>Your message has been sent!</h2><p>We will get back to you as soon as possible.</p></div>
-                <div className="formError"><div><MdOutlineCancelScheduleSend size={80} /></div><AiFillCloseCircle size={30} className='closeSuccess' onClick={() => document.querySelector('.formError').style.display = 'none'} /><h2>Something went wrong</h2><p>There was an error trying to send your message. Please try again later or contact us at our other channels.</p></div>
+                <div id='careersFormSuccess' className="formSuccess"><div><FiSend size={80} /></div><AiFillCloseCircle size={30} className='closeSuccess' onClick={() => document.querySelector('.formSuccess').style.display = 'none'} /><h2>Your message has been sent!</h2><p>We will get back to you as soon as possible.</p></div>
+                <div id='careersFormError' className="formError"><div><MdOutlineCancelScheduleSend size={80} /></div><AiFillCloseCircle size={30} className='closeSuccess' onClick={() => document.querySelector('.formError').style.display = 'none'} /><h2>Something went wrong</h2><p>There was an error trying to send your message. Please try again later or contact us at our other channels.</p></div>
             </form>
 
         </div>

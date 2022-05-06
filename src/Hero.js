@@ -1,34 +1,41 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ReactPlayer from 'react-player/lazy'
 import { motion } from 'framer-motion';
-import { BsArrowUpRight } from 'react-icons/bs';
+import BookForm from './BookForm';
+import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai'
 
 
 function Hero() {
+    const [open, setOpen] = useState(false);
+    const handleClick = () => {
+        setOpen(prev => {
+            return !prev
+        })
+    }
     return (
         <div className="hero">
             <div className="heroWrapper">
                 <motion.div
-                    className="heroHeadline">
+                    className="heroHeroFlex">
                     <motion.h1
-                    initial={{ y: -50, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ delay: .5, type: 'spring', bounce: 0, stiffness: 25 }}
+                        initial={{ y: -50, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ delay: .5, type: 'spring', bounce: 0, stiffness: 25 }}
                     >Keller Williams.<br />
-                    Your {["T","h","r","i","v","i","n","g"," ","B","u","s","i","n","e","s","s"].map((x,i)=>{
-                        return <motion.span
-                        key={i}
-                        className='colorRed'
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{delay: i * 0.105}}
-                        >{x}</motion.span>
-                    })}<br />is our Mission.</motion.h1>
-                </motion.div>
+                        Your {["T", "h", "r", "i", "v", "i", "n", "g", " ", "B", "u", "s", "i", "n", "e", "s", "s"].map((x, i) => {
+                            return <motion.span
+                                key={i}
+                                className='colorRed'
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ delay: i * 0.105 }}
+                            >{x}</motion.span>
+                        })}<br />is our Mission.</motion.h1>
+                
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
-                    transition={{delay:.3}}
+                    transition={{ delay: 1.5 }}
                     viewport={{ once: true }}
                     className="introVideoWrapper">
                     <ReactPlayer
@@ -37,11 +44,13 @@ function Hero() {
                         volume={50}
                         muted={true}
                         controls={true}
-                        playing={false}
+                        playing={true}
                         width={'100%'}
                     /></motion.div>
-
-                <div className="heroFlex">
+</motion.div>
+                <motion.div initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 2.5 }} className="heroFlex">
 
                     <div>
                         <h1>Mission</h1>
@@ -52,16 +61,20 @@ function Hero() {
                         <p>To be the preferred partner for growth mindset Associates who relentlessly deliver exceptional experiences making us the real estate company of choice for clients.</p>
                     </div>
 
-                </div>
+                </motion.div>
 
-                <motion.a
-                    href="https://pages.kw.com/jerry-van-leeuwen/456631/c97sjueojc6fmk0ois5g.html" target="_blank" rel="noreferrer">
-                    <motion.div
-                        initial={{ opacity: 0 }}
+                <motion.div layout="position" initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}
-                        className='getStarted'>Click here to get started<BsArrowUpRight size={25} /></motion.div>
-                </motion.a>
+                        viewport={{ once: true }} className="bookForm">
+                    <motion.div
+                    layout="position"
+                        onClick={handleClick}
+                        className='getStarted'>Book a free business consultation with Jerry <p>{open && <AiOutlineMinus />}{!open && <AiOutlinePlus />}</p>
+                    </motion.div>
+
+                    {open && <motion.div layout initial={{ opacity: 0}} animate={{ opacity: 1, transition:{duration: .5} }} style={{ color: 'black' }}><BookForm /></motion.div>}
+                </motion.div>
+
 
             </div>
         </div>

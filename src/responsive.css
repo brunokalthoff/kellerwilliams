@@ -7,19 +7,9 @@
     list-style-position: outside;
     list-style-type:none;
   }
-  .heroHeadline h1 {
-    max-width: 100%;
-    font-size: 3rem;
-    text-align: center;
-    padding-bottom: 8rem;
-  }
-
-  .introVideoWrapper {
-    margin-right: auto;
-  }
-
-  .heroFlex {
-    margin: 10rem 0;
+  
+  .heroFlex h1 {
+font-size: 2rem;
   }
 
   .team {
@@ -151,21 +141,17 @@
     font-size: 2rem;
   }
 }
-@media only screen and (max-width: 530px) {
 
-.splitButton span {
-  display: none;
+@media only screen and (max-width: 1031px) {
+.heroHeroFlex {
+  flex-wrap: wrap;
+  justify-content: center;
 }
-.splitButton {
-  gap: .5rem;
-}
-.heroHeadline {
-  text-align: center;
 }
 
-.getStarted {
-  font-size: 1.3rem;
-  margin: 10rem auto;
+@media only screen and (max-width: 1230px) {
+.heroHeroFlex h1 {
+  font-size: 2.3rem;
 }
 }
 
@@ -179,12 +165,17 @@
     padding: 0.5rem;
   }
 
-  .heroHeadline h1 {
-    font-size: 2.5rem;
+
+
+  .heroHeroFlex h1 {
+    font-size: 2rem;
+    padding: 0 0 2rem;
+    text-align: center;
+    width: 100%;
   }
 
   .heroFlex {
-    margin: 7.5rem 0;
+    margin: 3rem 0;
   }
 
   .team {
@@ -194,7 +185,6 @@
   .teamFlex {
     gap: 0rem;
   }
-
 
   .difference {
     background-color: var(--white);

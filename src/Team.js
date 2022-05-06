@@ -21,20 +21,20 @@ function Team() {
     const teamOpen = [
         {
             img: sillhouette1,
-            role: "Team Leader (m/f/d)",
+            role: "Team Leader",
             name: "YOU?",
             link: ""
         },
         {
             img: sillhouette2,
-            role: "Productivity Coach (m/f/d)",
+            role: "Productivity Coach",
             description: "",
             name: "YOU?",
             link: ""
         },
         {
             img: sillhouette3,
-            role: "Market Center Administrator (m/f/d)",
+            role: "Market Center Administrator",
             description: "",
             name: "YOU?",
             link: ""
@@ -78,7 +78,7 @@ function Team() {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                href="#careers" className="buttonSecondary">Join us</motion.a>
+                href="#careers" className="buttonSecondary">Join Us</motion.a>
         </div>
     );
 }
