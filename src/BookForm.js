@@ -40,11 +40,13 @@ export const BookForm = () => {
 
     return (
 
-        <div style={{ width: '100%', borderRadius: 0, zIndex: -5, margin: 0 }} className="careersFormWrapper bookFormWrapper boxShadow">
+        <div style={{ width: '100%', borderRadius: '2rem', zIndex: -5, margin: 0, padding: 0, background: 'inherit' }} className="careersFormWrapper bookFormWrapper">
+            <h1 style={{margin: 0}}>Book now </h1>
+            <h3>Book a free business consultation with Jerry!</h3>
 
-            <form className='careersForm' onSubmit={sendEmail}>
+            <form className='careersForm bookForm' onSubmit={sendEmail}>
 
-                <div className="inputWrapper">
+                <div className="inputWrapper ">
                     <label className='label'>Name *</label>
                     <input type="text" name="user_name" ref={nameField} placeholder="Your Name" required />
                 </div>
