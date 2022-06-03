@@ -220,7 +220,7 @@ header > div {
   color: var(--black);
   font-weight: 500;
   text-align: left;
-  padding: 0 0 1rem;
+  padding: 0 0 2rem;
   align-self: flex-start;
   width: 100%;
 }
@@ -263,41 +263,26 @@ header > div {
   margin: 0 auto;
   font-size: 1.1rem;
   font-weight: 300;
-  /* letter-spacing: .2rem;
-  line-height: 1.5rem;
-  text-align: justify; */
 }
-
-
 
 .getStarted {
   width: fit-content;
   font-size: .85rem;
   background-color: var(--red);
-  filter: brightness(1);
+  filter: brightness(1.2);
   border-radius: 1rem;
   color: var(--white);
   opacity: 1;
   border: none;
-  padding: 1.5rem 2rem;
+  padding: 1.5rem;
   cursor: pointer;
-  /* box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.49); */
   transition: all 0.1s ease-in-out;
   text-decoration: none;
   text-align: center;
-  z-index: 20;
-  margin: 0;
 }
 
 .getStarted:hover {
   filter: brightness(1.1);
-  /* box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.49); */
-}
-
-.getStarted p {
-  margin: 1rem 0 0;
-  color: var(--white);
-  font-size: 1.5rem;
 }
 
 .team {
@@ -306,6 +291,7 @@ header > div {
   flex-direction: column;
   align-items: center;
   max-width: 1300px;
+  width: 95%;
   margin: 0 auto;
 }
 
@@ -317,15 +303,15 @@ header > div {
   font-family: "Patua One", cursive;
   font-size: 2rem;
   font-family: "Roboto", sans-serif;
-  text-align: left;
+  text-align: center;
   margin: 0 0 1rem;
   width: 100%;
   opacity: .8;
 }
 
 .teamflex-leader {
-  width: 95%;
-  max-width: 1200px;
+  width: 100%;
+  max-width: 1000px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -336,25 +322,24 @@ header > div {
 
 .teamflex-leader-head {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  align-items: flex-end;
   width: 100%;
   padding: 0 3rem;
-}
-
-.teamflex-leader-head img {
-  margin: 0 10rem;
+  gap: 3rem;
 }
 
 .teamflex-leader-head div {
   display: flex;
   flex-direction: column;
+  min-width: 300px;
 }
 
 .teamflex-leader-head h1 {
   font-size: 3rem;
   margin: .5rem 0;
   padding: 0;
+  text-align: left;
 }
 
 .teamflex-leader-head h3 {
@@ -365,6 +350,10 @@ header > div {
 .teamflex-leader-head a {
   filter: brightness(1.1);
   padding: 1rem 0;
+}
+
+.teamflex-leader-head img {
+  border-radius: 1rem;
 }
 
 .teamflex-leader-text {

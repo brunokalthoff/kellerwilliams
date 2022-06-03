@@ -40,7 +40,7 @@ export const BookForm = () => {
 
     return (
 
-        <div style={{ width: '100%', borderRadius: '2rem', zIndex: -5, margin: 0, padding: 0, background: 'inherit' }} className="careersFormWrapper bookFormWrapper">
+        <div id="bookForm" style={{ width: '100%', borderRadius: '2rem', margin: 0, padding: 0, background: 'inherit' }} className="careersFormWrapper bookFormWrapper">
             <h1 style={{margin: 0}}>Book now </h1>
             <h3>Book a free business consultation with Jerry!</h3>
 

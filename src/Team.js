@@ -61,12 +61,13 @@ function Team() {
                     <img src={teamLeaders[0].img} alt={teamLeaders[0].role} />
                 </div>
                 <div className="teamflex-leader-text">
-                <p>{teamLeaders[0].bio}</p>
+                    <p>{teamLeaders[0].bio}</p>
                 </div>
-                <div>
-                    <BookForm />
-                </div>
+
             </div>
+            
+            <BookForm />
+
             <div className="teamflex">
                 {teamOpen.map((x, i) => (
                     <motion.div

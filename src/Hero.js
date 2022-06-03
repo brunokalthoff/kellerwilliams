@@ -23,12 +23,11 @@ function Hero() {
                                     animate={{ opacity: 1}}
                                     transition={{ delay: i * 0.105 }}
                                 >{x}</motion.span>
-                            })}<br /> <h1 style={{padding: '1rem 0'}}> Your Thriving Business <br /> is our Mission </h1></motion.h1>
-                        <motion.div
+                            })}<br /> <h1 style={{padding: '1rem 0'}}> Your thriving business <br /> is our mission </h1></motion.h1>
+                        <a href='#bookForm'
                             layout="position"
-                            onClick={{}}
                             className='getStarted'>Book a free business consultation with Jerry
-                        </motion.div>
+                        </a>
                     </div>
                     <motion.div
                         initial={{ opacity: 0 }}
