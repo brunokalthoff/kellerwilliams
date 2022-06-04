@@ -49,7 +49,7 @@ function Team() {
 
     return (
         <div className="team">
-            <h1>Milton Market Center - Leadership</h1>
+            <h1>Milton Market Centre - Leadership</h1>
             <div className="teamflex-leader">
 
                 <div className="teamflex-leader-head">
